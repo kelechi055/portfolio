@@ -3,39 +3,97 @@
 
 <head>
     </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kelechi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- LOADING ANIMATION -->
+    <div class="loader">
+        <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Loading..." />
+    </div>
+    <!-- KO LOGO -->
     <header class="header">
         <h1>
             <div>
-                <img src="https://i.postimg.cc/X7H2JjW8/ko.png" length="50" width="50">
+                <img class="interactive-ko spin-on-hover" src="https://i.postimg.cc/BtPjgcWB/ko-white.png" height="50" width="50">
             </div>
         </h1>
-        <div class="topright" class="interactive-img">
+
+        <!--SOCIALS-->
+        <div class="topright">
             <a href="https://www.linkedin.com/in/kelechi-opurum" target="_blank">
-                <img src="https://i.postimg.cc/tJ0zPJJ0/linkedn-green.png"
-                alt="Linked In!"
-                length="25"
+                <img class="interactive-img" src="https://i.postimg.cc/bsXsFDpc/linkedin-white.png" 
+                alt="LinkedIn!"
+                height="25"
                 width="25">
+                
             </a>
             <a href="https://github.com/kelechi055/kelechi055" target="_blank">
-                <img src="https://i.postimg.cc/qRrfLJzK/github-green.png"
-                alr="GitHub"
+                <img class="interactive-img" src="https://i.postimg.cc/XZNZcR3r/gitwhite.png"
+                alt="GitHub"
                 length="30"
                 width="30">
             </a>
-        </div>
     </header>
+    <!--HI MESSAGE-->
+    <div class  ="myface">
+        <img src="circlekel.png" width="200" height="200">
+    </div>
+    <div class="interactive-text-container">
     <h2 class="interactive-text">
-        <img src="https://camo.githubusercontent.com/0c732027af8a28d138e3698181f7be7c9b97d443b4beb9c7ce8ec4cffc6b4767/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966"
-        width="40"/>
-        Hi, I'm <span class="green-text">Kelechi</span>. A Software Developer.
-    </h2>
+        Hi. I'm Kelechi,<span class="green-text"> </span> <br>
 
+        <div class="typewriter">
+            <div id="typing-text">
+                
+            </div>
+        </div>
+
+        
+    </h2>
+    <div class="center">
+        <!--ABOUT ME-->
+        <h3>
+            Driven by a passion for exploring and learning through building.
+        </h3>
+    </div>
+    <div class="footer">
+        <footer>&copy; Kelechi Opurum 2024. | Built with HTML, CSS, and JS</footer>
+    </div>
+
+    
+
+<!-- NAVIGATION BAR --> 
+<nav class="navbar">
+    <ul>
+        <li class="hover-image-container">
+            <a href="index.html" class="active">
+                <img src="https://i.postimg.cc/fTJy60BQ/home-white.png" alt="Home" class="trigger-image">
+                <img src="https://i.postimg.cc/hjPYRrkH/home-pop.png" alt="hover home" class="hover-image">
+            </a>
+        </li>
+        <li class="hover-image-container"><a href="about.html">
+            <img src="https://i.postimg.cc/PxyNkWgT/about-white.png" alt="About" class="trigger-image">
+            <img src="https://i.postimg.cc/BQsbrQtz/about-pop.png" alt="hover home" class="hover-image">
+        </a></li>
+        <li class="hover-image-container"><a href="projects.html">
+            <img src="https://i.postimg.cc/4yFdYJ40/projects-white.png" alt="Projects" class="trigger-image">
+            <img src="https://i.postimg.cc/90LjZzLz/projects-pop.png" alt="hover projects" class="hover-image">
+        </a></li>
+        <li class="hover-image-container"><a href="resume.html">
+            <img src="https://i.postimg.cc/ryhzn9G9/resume-white.png" alt="Resume" class="trigger-image">
+            <img src="https://i.postimg.cc/FH0637Wp/resume-pop.png" alt=" hover resume" class= "hover-image">
+        </a></li>
+    </ul>
+</nav>
+    
     <script src="script.js"></script>
 </body>
 

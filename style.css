@@ -1,10 +1,173 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #051712;
-    color: white
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #101010;
+    height: 100%;
+    padding: 0;
+    width: 100%
+    
+    
+    
 }
 
+
+
+body.loaded {
+    opacity: 1;
+}
+
+.purpletext {
+    color: #5A377B
+}
+
+.typewriter {
+    text-align: center;
+    font-size: 1.0em;
+    margin-left: 78px;
+    margin-top: 0px;
+}
+
+#typing-text {
+    text-align: center;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    color: #A7A7A7;
+    position: absolute;
+}
+
+
+h2 {
+    font-size: 3.0em;
+    text-align: center;
+    color: #A7A7A7;
+}
+
+h2 span {
+    display:inline-block;
+}
+h3 {
+    margin-top: 500px;
+    font-size: 1.3em;
+    color: #A7A7A7;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    margin: 0 auto;
+    margin: 200px auto; 
+    margin-left: 20px;
+    line-height: 1.6; 
+    font-family: 'Inter', 'Inter';
+    font-weight: 400;
+    
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+
+.outline {
+    background-color: #1D1D1F;
+    color: white; /* Text color */
+    padding: 20px; /* Add some padding to the container */
+    border-radius: 10px; /* Rounded corners */
+    border: 4px solid #3A3A3B; /* Border color and thickness */
+    display: flex; /* Use Flexbox */
+    margin-top: -200px;
+    font-family: monospace;
+    position: relative; /* Relative positioning for absolute child */
+    transition: background-color 1s ease-in-out, border-color 1s ease-in-out;
+    margin-right: 20px;
+    
+  }
+
+
+  .outline text {
+    background-color: #1D1D1F;
+    color: white; /* Text color */
+    padding: 20px; /* Add some padding to the container */
+    border-radius: 20px; /* Rounded corners */
+    border: 5px solid #3A3A3B; /* Border color and thickness */
+    display: flex; /* Use Flexbox */
+
+    margin-top: 0px;
+    font-family: monospace;
+    position: relative; /* Relative positioning for absolute child */
+  }
+  .outline img {
+    border-radius: 5px;
+    padding: 0;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  }
+
+  .outline:hover {
+    background-color: #0C6829; /* Darker green */
+    border-color: #14E956; /* Light green */
+  }
+
+  .outline:hover img {
+    transform: scale(1.02); /* Scale up the image when hovering over the outline */
+    
+  }
+
+  .about-me {
+    background-color: #1D1D1F;
+    color: white; /* Text color */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    border: 4px solid #3A3A3B; /* Border color and thickness */
+    position: absolute; /* Absolute positioning */
+    top: 350px; /* Adjust the top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 900px; /* Decreased width */
+    height: 200px; /* Fixed height */
+    overflow: hidden; /* Hide overflow content */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    text-align: center; /* Center text inside */
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out; /* Smooth transition */
+}
+
+.about-me:hover {
+    background-color: #0C6829; /* Darker green */
+    border-color: #14E956; /* Light green */
+}
+
+
+  .text-container {
+    background-color: #1D1D1F;
+    color: white; /* Text color */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    border: 4px solid #3A3A3B; /* Border color and thickness */
+    position: absolute; /* Absolute positioning */
+    top: 200px; /* Adjust the top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 900px; /* Decreased width */
+    height:200px; /* Fixed height */
+    overflow: hidden; /* Hide overflow content */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    text-align: center; /* Center text inside */
+  }
+
+.pdf-container {
+    width:55%;
+    max-height: 850px;
+    height: 90vh; 
+    border: none;
+    justify-content: center;
+    margin: 0 auto;
+    display: block;
+}
 
 .header {
     display: flex;
@@ -12,53 +175,360 @@ body {
     align-items: center;
     padding: 10px 40px;
     color: white;
+    margin-top: -100px;
+    
 }
 
-h1 {
-    font-size: 1.5em;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items:normal
+    
 }
 
-
-h2 {
-    font-size: 2.5em;
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.item {
     text-align: center;
-    animation: fadeIn 2s easer-inout;
-    color:white
+    margin: 0 20px;
+    color: white
+}
+.numbers {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a5a5a5;
+}
+.bottom {
+    font-size: 16px;
+}
+h1 {
+    font-size: 6.0em;
+
+}
+
+
+.bottom-left {
+    text-align: left;
+    margin-top: 20px; 
+}
+
+
+
+h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    animation: slide-right 2s ease-in-out;
+    margin: 0 auto;
+    max-width: 800px; 
+    margin: 80px auto; 
+    line-height: 1.6; 
+    font-family:monospace
+    
+}
+
+
+.container {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    perspective: 1000px;
+    width: 1000px; /* Match the width of your image */
+    height: 700px; /* Match the height of your image */
+}
+
+.image3d {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.image-container:hover .image3d {
+    transform: rotateY(15deg) rotateX(15deg) scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 40%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: #1D1D1F;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    width: fit-content;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 5px 0;
+}
+
+.navbar a {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1faa49;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.hover-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.trigger-image {
+    width: 50px; /* Size of the trigger image */
+    height: 50px; /* Size of the trigger image */
+    border-radius: 50%;
+    pointer-events: none;
+    
+}
+
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 1;
+    left: -120px; /* Adjust this value to position the hover image to the left */
+    width: 110px; /* Size of the hover image */
+    height: 60px; /* Size of the hover image */
+    pointer-events: none;
+}
+
+.hover-image-container:hover .hover-image {
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 21%);
+    border-radius: 50%;
+}
+
+/* Loading animation styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures loader stays on top */
+}
+
+.myface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    animation: slide-down 2s ease-in-out;
+    transform: scale(1.03);
+}
+
+
+.loader img {
+    width: 80px; /* Adjusts size as needed */
+    animation: spin 3s linear infinite; /* Rotate animation */
+}
+
+@keyframes slideIn {
+    0% { left: -100%; }
+    100% { left: 0; }
+}
+
+@keyframes slideOut {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .green-text {
-    color: #14E956;
+    color: #b4b4b4;
+}
+
+.active {
+    background-color: hsl(0, 0%, 21%);
+    border-radius: 50%;
+}
+.interactive-text-container {
+    text-align: center; /* center text horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto; /* adjusts the margin */
+    width: fit-content;
+}
+
+.interactive-text {
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+    max-width: 100%;
+    animation: slide-down 2s ease-in-out;
+}
+
+.interactive-text:hover {
+    color: #ffffff; /* Change text color to white on hover */
+    transform: scale(1.03); /* Scale text on hover */
+
+}
+
+
+.interactive-ko {
+    transition: transform 0.3s, opacity 0.8;
+}
+
+.interactive-ko:hover {
+    transform: scale(1.3) rotate(360deg);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.interactive-img {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.interactive-img:hover {
+    transform: scale(1.3);
+}
+
+.topright a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.topright a img {
+    vertical-align: middle;
+}
+
+.topright a:link,
+.topright a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.center {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.spin-on-hover {
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.spin-on-hover:hover{
+    transform: rotate(360deg);
+}
+
+.footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin-top: 250px;
+    font-size: 12px;
+    color: #3a3a3a; 
 }
 
 @keyframes fadeIn {
-    from{
+    from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-.interactive-text {
-    transition: color 0.3s, transform 0.3s;
-}
+@keyframes slide-right {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
 
-.interactive-text:hover {
-    color: #14E956;
-    transform: scale(1.1);
-    cursor: pointer;
-}
+@keyframes slide-down {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
 
-.topright a {
-    margin-left: 10px;
-    text-decoration: none; /*removes underline*/
-}
-
-.topright a img {
-    vertical-align: middle; /*Allign images properly */
-}
-
-.topright a:link, .topright a:visited {
-    text-decoration: none; /* Ensure no underline for links */
-    color: inherit; /* Inherit color from parent */
-}
+@keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
