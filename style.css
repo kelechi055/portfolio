@@ -125,7 +125,7 @@ body.loaded {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 900px; /* Decreased width */
-    height: 200px; /* Fixed height */
+    height: 300px; /* Fixed height */
     overflow: hidden; /* Hide overflow content */
     display: flex; /* Use Flexbox */
     justify-content: center; /* Center children horizontally */
