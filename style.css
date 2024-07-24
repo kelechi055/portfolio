@@ -382,6 +382,7 @@ h4 {
     height: auto;
     animation: slide-down 2s ease-in-out;
     transform: scale(1.03);
+    pointer-events: none;
 }
 
 
