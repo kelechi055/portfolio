@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const texts = [
-    "a {Comp Sci Student.}",
+    "a {CompSci Student.}",
     "a <Software Dev/>.",
     "a /Graphic Designer",
     "a [Content Creator]"
