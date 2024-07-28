@@ -77,3 +77,7 @@ let letter = '';
         setTimeout(type, 100); // Adjust typing speed here
     }
 }());
+
+
+//send a message
+
