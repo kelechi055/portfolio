@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const texts = [
     "a {Comp Sci Student.}",
     "a <Software Dev/>.",
-    "a /Graphic Designer.",
-    "a [Content Creator] ."
+    "a /Graphic Designer",
+    "a [Content Creator]"
 ];
 
 let count = 0;
