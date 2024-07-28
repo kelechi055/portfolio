@@ -534,4 +534,74 @@ h4 {
     }
   }
 
-  
+  /* Keyframes for slide-down animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Applying animation to the heading */
+h2.center {
+    animation: slideDown 2s ease-in;
+}
+
+/* Applying animations to the project cards */
+.project-card:nth-of-type(1) {
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.project-card:nth-of-type(2) {
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+
+/* Applying slide-up animation to the third project card */
+.project-card:nth-of-type(3) {
+    animation: slideUp 1s ease-out;
+}
+
+/* Ensure container overflow is hidden if needed */
+.projects-container {
+    overflow: hidden;
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
