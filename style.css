@@ -7,10 +7,16 @@ body {
     background-color: #101010;
     height: 100%;
     padding: 0;
-    width: 100%
-    
-    
-    
+    width: 100%;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it stays behind other content */
 }
 
 
@@ -45,6 +51,7 @@ h2 {
     font-size: 3.0em;
     text-align: center;
     color: #A7A7A7;
+    animation: slide-down 2s ease-in-out;
 }
 
 h2 span {
@@ -62,6 +69,8 @@ h3 {
     line-height: 1.6; 
     font-family: 'Inter', 'Inter';
     font-weight: 400;
+    
+
     
 }
 
@@ -605,3 +614,105 @@ h2.center {
         opacity: 1;
     }
 }
+
+/* Container for tech stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Adjusted spacing */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Heading for tech stack */
+.tech-stack h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3.0em;
+    color: #A7A7A7;
+}
+
+/* Style for each tech icon */
+.tech-stack img {
+    width: 60px;
+    height: 60px;
+    transition: transform 1s ease-in-out, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    animation: slideUp 2s ease-out forwards; /* make sure that the animation stays in the final state */
+    opacity: 0; /* the original opacity */
+    transform: translateY(20px) ease-in-out; /* Initial position */
+    
+}
+
+/* Hover effect for my techstack */
+.tech-stack img:hover {
+    transform: scale(1.1) !important; /* makes sure hover effect takes precedence */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important; /* also makes sure the hover effect takes precedence */
+}
+
+/* Define the keyframes for sliding up */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px); /* Start from below */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* End visible */
+    }
+}
+
+/* Apply staggered animation */
+.tech-stack img:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.tech-stack img:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.tech-stack img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.tech-stack img:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.tech-stack img:nth-child(5) {
+    animation-delay: 1s;
+}
+.tech-stack img:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.tech-stack img:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.tech-stack img:nth-child(8) {
+    animation-delay: 1.6s;
+}
+.tech-stack img:nth-child(9) {
+    animation-delay: 1.8s;
+}
+.tech-stack img:nth-child(10) {
+    animation-delay: 2s;
+}
+.tech-stack img:nth-child(11) {
+    animation-delay: 2.2s;
+}
+.tech-stack img:nth-child(12) {
+    animation-delay: 2.4s;
+}
+.tech-stack img:nth-child(13) {
+    animation-delay: 2.6s;
+}
+.tech-stack img:nth-child(14) {
+    animation-delay: 2.8s;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
