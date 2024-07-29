@@ -30,110 +30,20 @@
     <link rel="stylesheet" href="style.css">
     <!-- Add any additional styles here if needed -->
     <style>
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 1200px;
-}
-
-.project-card {
-    background-color: #1d1d1f;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 500px; /* Card width */
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Slightly larger scale on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-}
-
-.project-image {
-    width: 100%;
-    height: 300px; /* Increased height for more image space */
-    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
-    pointer-events: none;
-}
-
-.project-content {
-    padding: 10px 15px; /* Reduced padding for better spacing */
-    color: #fff;
-}
-
-.project-title {
-    font-size: 1.4rem;
-    margin: 10px 0 5px; /* Reduced margin above the title */
-    font-weight: bold;
-}
-
-.project-description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 10px; /* Reduced margin bottom */
-}
-
-.tech-stack {
-    margin-bottom: 10px; /* Reduced margin bottom */
-    color: #14e956;
-}
-
-.project-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.project-link {
-    color: #000000;
-    background-color: #14e956;
-    border-radius: 5px;
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.project-link:hover {
-    background-color: #13c24a;
-}
-
-.placement-badge {
-    display: inline-block;
-    background-color: #14e956;
-    color: #000000;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none; /* Remove underline from the link */
-}
-
-.placement-badge:hover {
-    background-color: #13c24a;
-}
     </style>
 </head>
 
 <body style="background-color: #101010;">
 
-    
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ7BLPZZ"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Background -->
+    <div id="background"></div>
 
     <!-- LOADING ANIMATION -->
     <div class="loader">
@@ -177,7 +87,6 @@
                 <p class="project-description">
                     Developed a real-time stock simulator for video game stocks using Next.js. Integrated APIs for accurate data and news updates.
                 </p>
-                <br>
                 <div class="tech-stack">
                     Next.js, TypeScript, Python, Tailwind
                 </div>
@@ -196,7 +105,6 @@
                 <p class="project-description">
                     Created an interactive web app that suggests outfits based on mood and gender, utilizing SheCodes AI and Pexels API for dynamic content.
                 </p>
-                <br>
                 <div class="tech-stack">
                     JavaScript, HTML, CSS
                 </div>
@@ -215,7 +123,6 @@
                 <p class="project-description">
                     Designing a machine learning model to analyze user behavior and track AI performance metrics, providing valuable insights.
                 </p>
-                <br>
                 <div class="tech-stack">
                     Python, ReactJS, NextJS, FireBase
                 </div>
@@ -226,8 +133,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Navigation Bar -->
     <nav class="navbar">

@@ -78,6 +78,13 @@ let letter = '';
     }
 }());
 
+// BG
 
+document.addEventListener('mousemove', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+    const radius = 400; // Adjust this value if needed
 
-
+    const background = document.getElementById('background');
+    background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
+});

@@ -4,10 +4,34 @@ body {
     font-family: 'Inter', sans-serif;
     background-size: auto;
     background-repeat: no-repeat;
-    background: linear-gradient(120deg, #1a1a1d, #101010, #1a1a1d);
+    background: linear-gradient(120deg, #0d0d0d, #0a0a0a, #0d0d0d);
     height: 100%;
     padding: 0;
     width: 100%;
+}
+
+
+#background {
+    position: absolute;
+    z-index: -1; /* Ensure it’s behind other content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent the background from blocking interactions */
+    transition: background-color 0.3s ease;
+    background: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
 }
 
 body.loaded {
@@ -119,7 +143,7 @@ body.loaded {
     border-radius: 10px; /* Rounded corners */
     border: 4px solid #3A3A3B; /* Border color and thickness */
     position: absolute; /* Absolute positioning */
-    top: 350px; /* Adjust the top position as needed */
+    top: 300px; /* Adjust the top position as needed */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 900px; /* Decreased width */
@@ -145,11 +169,10 @@ body.loaded {
     border-radius: 10px; /* Rounded corners */
     border: 4px solid #3A3A3B; /* Border color and thickness */
     position: absolute; /* Absolute positioning */
-    top: 200px; /* Adjust the top position as needed */
-    left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 900px; /* Decreased width */
     height:200px; /* Fixed height */
+    margin-top: 150px;
     overflow: hidden; /* Hide overflow content */
     display: flex; /* Use Flexbox */
     justify-content: center; /* Center children horizontally */
@@ -174,35 +197,39 @@ body.loaded {
     padding: 10px 40px;
     color: white;
     margin-top: -100px;
-    
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items:normal
-    
+    align-items: center; /* Adjusted */
+    margin-top: 200px; /* Added margin-top to create space */
 }
 
 .text-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 150px; /* Adjusted to avoid overlap */
 }
+
 .item {
     text-align: center;
-    margin: 0 20px;
-    color: white
+    margin: 0 20px; /* Increased margin for spacing */
+    color: white;
 }
+
 .numbers {
     font-size: 24px;
     font-weight: bold;
     color: #a5a5a5;
 }
+
 .bottom {
     font-size: 16px;
+    margin-top: 20px; /* Reduced margin-top */
 }
+
 h1 {
     font-size: 6.0em;
 
@@ -487,8 +514,6 @@ h4 {
 }
 
 .footer {
-    bottom: 0;
-    width: 100%;
     margin-top: 270px;
     font-size: 12px;
     color: #3a3a3a; 
@@ -605,11 +630,13 @@ h2.center {
 
 /* Container for tech stack */
 .tech-stack {
+    margin-bottom: 10px; /* Reduced margin bottom */
+    color: #14e956;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px; /* Adjusted spacing */
-    margin-top: 20px; /* Top margin */
+    margin-top: 30px; /* Top margin */
 }
 
 /* Heading for tech stack */
@@ -695,6 +722,96 @@ h2.center {
     animation-delay: 2.8s;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: #1d1d1f;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 500px; /* Card width */
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly larger scale on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+    width: 100%;
+    height: 300px; /* Increased height for more image space */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
+    pointer-events: none;
+}
+
+.project-content {
+    padding: 10px 15px; /* Reduced padding for better spacing */
+    color: #fff;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    margin: 10px 0 5px; /* Reduced margin above the title */
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 10px; /* Reduced margin bottom */
+    color: #A7A7A7;
+}
+
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-link {
+    color: #000000;
+    background-color: #14e956;
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #13c24a;
+}
+
+.placement-badge {
+    display: inline-block;
+    background-color: #14e956;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.placement-badge:hover {
+    background-color: #13c24a;
+}
+
 #particles-js {
     position: absolute;
     top: 0;
@@ -703,4 +820,3 @@ h2.center {
     height: 100%;
     z-index: -1; /* Ensure it stays behind other content */
 }
-
