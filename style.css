@@ -10,17 +10,14 @@ body {
     width: 100%;
 }
 
-
 #background {
-    position: absolute;
-    z-index: -1; /* Ensure it’s behind other content */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Prevent the background from blocking interactions */
-    transition: background-color 0.3s ease;
-    background: none;
+    background: #101010; /* Replace with your desired color or image */
+    z-index: -1; /* Ensures it stays behind other elements */
 }
 
 .cursor {
@@ -188,6 +185,7 @@ body.loaded {
     justify-content: center;
     margin: 0 auto;
     display: block;
+    animation: none;
 }
 
 .header {
@@ -820,3 +818,4 @@ h2.center {
     height: 100%;
     z-index: -1; /* Ensure it stays behind other content */
 }
+

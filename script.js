@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const programmingHours = document.querySelector('.numbers.programming-hours');
     const SubscriberCount = document.querySelector('.numbers.sub-count');
 
-    countUp(codingYears, 0, 3, 1000); // Counts up to 3+ in 1 second
-    countUp(programmingHours, 0, 1000, 2000); // Counts up to 1000+ in 2 seconds
+    countUp(codingYears, 0, 3, 2000); // Counts up to 3+ in 2 second
+    countUp(programmingHours, 0, 500, 3000); // Counts up to 1000+ in 3 seconds
     countUp(SubscriberCount, 0, 23000, 3000)
 });
 
@@ -88,3 +88,4 @@ document.addEventListener('mousemove', (event) => {
     const background = document.getElementById('background');
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
 });
+
