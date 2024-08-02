@@ -16,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #101010; /* Replace with your desired color or image */
+    background: #101010; /* Replaces the background with a greyish color */
     z-index: -1; /* Ensures it stays behind other elements */
 }
 
