@@ -83,7 +83,7 @@ let letter = '';
 document.addEventListener('mousemove', (event) => {
     const x = event.clientX;
     const y = event.clientY;
-    const radius = 400; // Value for the cursor glow
+    const radius = 400; // Radius of the cursor glow
 
     const background = document.getElementById('background');
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
