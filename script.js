@@ -1,11 +1,11 @@
 // RemoveS loader and show content after page THE has fully loaded
  window.addEventListener('load', function () {
     const loader = document.querySelector('.loader');
-    loader.classList.add('fadeOut'); // Optional: add a fade out effect
+    loader.classList.add('fadeOut'); adds a fade out effect
     setTimeout(() => {
         loader.style.display = 'none';
         document.body.classList.add('loaded');
-    }, 500); // Adjust delay as needed
+    }, 500); // Delays the loader
 });
 
 const navLinks = document.querySelectorAll('.navbar a');
@@ -72,9 +72,9 @@ let letter = '';
         setTimeout(() => {
             document.getElementById('typing-text').textContent = '';
             type();
-        }, 1000); // Wait for 2 seconds before starting to type the next sentence
+        }, 1000); // Waits for 2 seconds before starting to type the next sentence
     } else {
-        setTimeout(type, 100); // Adjust typing speed here
+        setTimeout(type, 100);
     }
 }());
 
@@ -83,7 +83,7 @@ let letter = '';
 document.addEventListener('mousemove', (event) => {
     const x = event.clientX;
     const y = event.clientY;
-    const radius = 400; // Adjust this value if needed
+    const radius = 400; // Value for the cursor glow
 
     const background = document.getElementById('background');
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
