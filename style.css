@@ -262,8 +262,8 @@ h4 {
 .image-container {
     position: relative;
     perspective: 1000px;
-    width: 1000px; /* Match the width of your image */
-    height: 700px; /* Match the height of your image */
+    width: 1000px; 
+    height: 700px; 
 }
 
 .image3d {
@@ -457,8 +457,8 @@ h4 {
 }
 
 .interactive-text:hover {
-    color: #ffffff; /* Change text color to white on hover */
-    transform: scale(1.03); /* Scale text on hover */
+    color: #ffffff; /* Changes text color to white on hover */
+    transform: scale(1.03); 
 
 }
 
