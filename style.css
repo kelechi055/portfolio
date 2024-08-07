@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     background-size: auto;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background: linear-gradient(120deg, #0d0d0d, #0a0a0a, #0d0d0d);
     height: 100%;
     padding: 0;
