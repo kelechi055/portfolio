@@ -1,19 +1,18 @@
-// RemoveS loader and show content after page THE has fully loaded
+
  window.addEventListener('load', function () {
     const loader = document.querySelector('.loader');
-    loader.classList.add('fadeOut'); adds a fade out effect
+    loader.classList.add('fadeOut'); 
     setTimeout(() => {
         loader.style.display = 'none';
         document.body.classList.add('loaded');
-    }, 500); // Delays the loader
+    }, 500); 
 });
 
 const navLinks = document.querySelectorAll('.navbar a');
     
-// Get the current URL path
+
 const currentPath = window.location.pathname;
 
-// Loop through each link and add the 'active' class if the href matches the current path
 navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPath) {
         link.classList.add('active');
@@ -72,9 +71,9 @@ let letter = '';
         setTimeout(() => {
             document.getElementById('typing-text').textContent = '';
             type();
-        }, 1000); // Waits for 2 seconds before starting to type the next sentence
+        }, 1000); // Wait for 2 seconds before starting to type the next sentence
     } else {
-        setTimeout(type, 100);
+        setTimeout(type, 100); 
     }
 }());
 
@@ -83,9 +82,8 @@ let letter = '';
 document.addEventListener('mousemove', (event) => {
     const x = event.clientX;
     const y = event.clientY;
-    const radius = 400; // Radius of the cursor glow
+    const radius = 400; 
 
     const background = document.getElementById('background');
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
 });
-
