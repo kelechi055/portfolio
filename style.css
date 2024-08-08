@@ -819,3 +819,296 @@ h2.center {
     z-index: -1; /* Ensure it stays behind other content */
 }
 
+.gallery-section {
+    display: flex;
+    justify-content: center; /* Center the gallery section horizontally */
+    align-items: center; /* Center the gallery section vertically if needed */
+    padding: 40px 0; /* Add padding for spacing */
+    background-color: #101010; /* Set background color */
+}
+
+.gallery-container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    width: 100%; /* Allow the container to take full width */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.gallery-title {
+    font-size: 2em;
+    text-align: center;
+    color: #fff; /* White text color */
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase minimum size of grid items */
+    gap: 20px; /* Space between grid items */
+    /* Removed overflow-y: auto; to prevent internal scroll */
+    max-height: none; /* Remove maximum height restriction */
+    padding-right: 10px; /* Add some padding for better view */
+    justify-items: center; /* Center the items horizontally */
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* Ensure the gallery-item takes full width of grid cell */
+    max-width: 100%; /* Prevent items from exceeding their container */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly larger scale on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Center the image horizontally */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body {
+    background-color: #101010; /* Background color as per your preference */
+    color: #f5f5f5; /* Light color for text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #14E956;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 700px; /* Limit the width of the text box */
+    margin: 0 auto; /* Center the text box */
+    background-color: #202020; /* Optional: Add a background color for the box */
+    padding: 20px; /* Padding for a better visual appearance */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-size: 1.5em;
+}
+
+.about-link {
+    color: #14E956;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.about-link:hover {
+    color: #00cc44;
+}
+
+.about-image img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px 0;
+    
+}
+
+.tech-stack img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+    margin-top: -100px;
+    pointer-events: stroke;
+    max-width: 700px; /* Limit the width of the text box */
+    margin: 0 auto; /* Center the text box */
+    background-color: #202020; /* Optional: Add a background color for the box */
+    padding: 20px; /* Padding for a better visual appearance */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-size: 1.5em;
+}
+
+.tech-stack img:hover {
+    transform: translateY(-5px);
+}
+
+
+.titles{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #14E956;
+}
+
+.music-box {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+}
+
+.music-box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1DB954;
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.music-controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.music-controls button:hover {
+    transform: scale(1.1);
+}
+
+.music-controls button img {
+    width: 35px;
+    height: 35px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+    display: none; /* Hide default controls */
+}
+
+.playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #444;
+}
+
+.playlist li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #444;
+}
+
+.playlist li:hover {
+    background-color: #333;
+}
+
+.playlist li.active {
+    background-color: #1DB954;
+    color: #fff;
+}
+
+.playlist img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.track-info {
+    flex-grow: 1;
+}
+
+.track-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.track-artist {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* Custom player controls */
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.player-controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 0 10px;
+}
+
+.player-controls button:hover {
+    transform: scale(1.1);
+}
+
+.player-controls button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Progress Bar */
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    background-color: #1DB954;
+    border-radius: 5px;
+    width: 0;
+}
