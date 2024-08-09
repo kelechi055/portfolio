@@ -403,10 +403,30 @@ h4 {
     margin: 0;
     max-width: 100%;
     height: auto;
+    transition: transform 0.5s ease-in-out;
     animation: slide-down 2s ease-in-out;
-    transform: scale(1.03);
     pointer-events: none;
 }
+
+.myface img:hover {
+    transform: scale(1.03);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.interactive-text {
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+    max-width: 100%;
+    animation: slide-down 2s ease-in-out;
+}
+
+.interactive-text:hover {
+    color: #ffffff; /* Changes text color to white on hover */
+    transform: scale(1.03); 
+
+}
+
 
 
 .loader img {
@@ -749,9 +769,8 @@ h2.center {
 
 .project-image {
     width: 100%;
-    height: 300px; /* Increased height for more image space */
-    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
-    pointer-events: none;
+    height: 400px; /* Increased height for more image space */
+    object-fit: fill; /* Ensures the image maintains aspect ratio while covering the area */
 }
 
 .project-content {
@@ -766,7 +785,7 @@ h2.center {
 }
 
 .project-description {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 10px; /* Reduced margin bottom */
     color: #A7A7A7;
@@ -801,7 +820,7 @@ h2.center {
     border-radius: 20px;
     font-weight: bold;
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     text-decoration: none; /* Remove underline from the link */
 }
@@ -935,7 +954,7 @@ body {
 }
 
 .about-link:hover {
-    color: #00cc44;
+    color: #01bb3f;
 }
 
 .about-image img {
@@ -1111,4 +1130,9 @@ audio {
     background-color: #1DB954;
     border-radius: 5px;
     width: 0;
+}
+
+.highlight {
+    font-weight: bold;
+    font-style: italic;
 }
