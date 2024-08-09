@@ -8,6 +8,12 @@ body {
     height: 100%;
     padding: 0;
     width: 100%;
+    
+}
+
+img {
+    -webkit-user-drag: none; /* For WebKit-based browsers (Chrome, Safari) */
+    user-drag: none; /* For other browsers */
 }
 
 #background {
@@ -877,6 +883,8 @@ h2.center {
     cursor: pointer;
     width: 100%; /* Ensure the gallery-item takes full width of grid cell */
     max-width: 100%; /* Prevent items from exceeding their container */
+    -webkit-user-drag: none;
+    user-drag: none;
 }
 
 .gallery-item img {
