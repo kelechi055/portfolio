@@ -29,6 +29,7 @@
     <meta name="author" content="Kelechi Opurum">
     <title>Kelechi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -76,17 +77,13 @@
         </div>
     </div>
     <div class="interactive-text-container">
-    <h2 class="interactive-text">
-        Hi. I'm Kelechi,<span class="green-text"> </span> <br>
-
-        <div class="typewriter">
-            <div id="typing-text">
-                
-            </div>
-        </div>
-
+        <h2 class="interactive-text">
+            Hi. I'm Kelechi,<span class="green-text"> </span> <br>
         
-    </h2>
+            <div id="typing-container">
+                <div id="typing-text"></div>
+            </div>
+        </h2>
     <div class="center">
         <!--ABOUT ME-->
         <h3>
@@ -98,7 +95,9 @@
     </div>
 
     
-
+<button class="menu-toggle" aria-label="Open menu">
+    &#9776; <!-- This is a hamburger icon -->
+</button>
 <!-- NAVIGATION BAR --> 
 <nav class="navbar">
     <ul>
@@ -122,6 +121,7 @@
         </a></li>
     </ul>
 </nav>
+
     
     <script src="script.js"></script>
 </body>

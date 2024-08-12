@@ -37,10 +37,6 @@ img {
     transition: transform 0.1s ease;
 }
 
-body.loaded {
-    opacity: 1;
-}
-
 .purpletext {
     color: #5A377B
 }
@@ -73,6 +69,7 @@ h2 {
 h2 span {
     display:inline-block;
 }
+
 h3 {
     margin-top: 500px;
     font-size: 1.3em;
@@ -81,15 +78,23 @@ h3 {
     animation: fadeIn 2s ease-in-out;
     margin: 0 auto;
     margin: 200px auto; 
-    margin-left: 20px;
-    line-height: 1.6; 
-    font-family: 'Inter', 'Inter';
     font-weight: 400;
-    
-
-    
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 0 20px; /* Add padding for spacing */
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.1em; /* Adjust font size for mobile */
+        padding: 0 15px; /* Ensure proper spacing on smaller screens */
+        margin-top: 20px; /* Adjust top margin for better fit on mobile */
+        margin-left: auto; /* Ensure centering */
+        margin-right: auto; /* Ensure centering */
+    }
+}
 body.loaded {
     opacity: 1;
 }
@@ -307,23 +312,23 @@ h4 {
     text-align: center;
 }
 
+/* Base styles for navbar (Desktop) */
 .navbar {
     position: fixed;
-    top: 40%;
-    right: 30px;
-    transform: translateY(-50%);
+    top: 250px; /* Position vertically */
+    right: 30px; /* Position horizontally */
+    width: fit-content;
     background-color: #1D1D1F;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: auto;
-    margin-right: 30px;
-    width: fit-content;
+    transition: transform 0.3s ease;
     z-index: 1000;
 }
 
+/* Ensure items are centered and have spacing */
 .navbar ul {
     list-style-type: none;
     padding: 0;
@@ -337,6 +342,7 @@ h4 {
     margin: 5px 0;
 }
 
+/* Style for links */
 .navbar a {
     display: block;
     font-weight: 700;
@@ -344,8 +350,7 @@ h4 {
     color: #1faa49;
     text-decoration: none;
     text-align: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -353,6 +358,45 @@ h4 {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        left: 0; /* Center the navbar horizontally */
+        width: 100%;
+        height: 60px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+        margin-right: auto;
+    }
+    
+    .navbar ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .navbar li {
+        margin: 0;
+    }
+
+    .navbar a {
+        font-weight: 700;
+        font-size: 16px;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .hover-image-container {
@@ -538,9 +582,14 @@ h4 {
 }
 
 .footer {
-    margin-top: 270px;
+    position: fixed;
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    width: 100%; /* Full width */
     font-size: 12px;
-    color: #3a3a3a; 
+    color: #3a3a3a;
+    padding: 10px;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -564,12 +613,14 @@ h4 {
 
 @keyframes slide-down {
     from {
-      transform: translateY(-100%);
+        transform: translateY(-100px);
+        opacity: 0;
     }
     to {
-      transform: translateY(0%);
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
 @keyframes slide-up {
     from {
@@ -580,44 +631,32 @@ h4 {
     }
   }
 
-  /* Keyframes for slide-down animation */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-
-/* Applying animation to the heading */
-h2.center {
-    animation: slideDown 2s ease-in;
-}
-
-/* Applying animations to the project cards */
-.project-card:nth-of-type(1) {
-    animation: slideInFromLeft 1.5s ease-out;
+  .project-card:nth-of-type(1) {
+    animation: slideInFromLeft 1.5s ease-in-out;
 }
 
 .project-card:nth-of-type(2) {
-    animation: slideInFromRight 1.5s ease-out;
+    animation: slideInFromRight 1.5s ease-in-out;
 }
 
-
-/* Applying slide-up animation to the third project card */
 .project-card:nth-of-type(3) {
-    animation: slideUp 1s ease-out;
+    animation: slideUp 1s ease-in-out;
 }
 
-/* Ensure container overflow is hidden if needed */
-.projects-container {
-    overflow: hidden;
-}
+@media (max-width: 768px) {
+    .project-card:nth-of-type(1) {
+        animation: slideInFromLeft 1.5s ease-in-out;
+    }
 
+    .project-card:nth-of-type(2) {
+        animation: slideInFromRight 1.5s ease-in-out;
+    }
+
+    .project-card:nth-of-type(3) {
+        animation: slideUp 1.2s ease-in-out; /* Adjusted duration for mobile */
+    }
+}
 
 @keyframes slideInFromLeft {
     from {
@@ -651,6 +690,8 @@ h2.center {
         opacity: 1;
     }
 }
+
+
 
 /* Container for tech stack */
 .tech-stack {
@@ -686,7 +727,7 @@ h2.center {
 
 /* Hover effect for my techstack */
 .tech-stack img:hover {
-    transform: scale(1.1) !important; /* makes sure hover effect takes precedence */
+    transform: scale(.1)  !important; /* makes sure hover effect takes precedence */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important; /* also makes sure the hover effect takes precedence */
 }
 
@@ -754,6 +795,8 @@ h2.center {
     margin: 50px auto;
     padding: 20px;
     max-width: 1200px;
+    position: relative;
+    
 }
 
 .project-card {
@@ -766,6 +809,19 @@ h2.center {
     text-align: center;
     position: relative;
     cursor: pointer;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        /* Adjust size and layout for mobile if necessary */
+        width: 100%; /* Example adjustment */
+        margin: 0 auto; /* Center the card */
+    }
+}
+
+.menu-toggle {
+    display: none; /* Hides the element */
 }
 
 .project-card:hover {
@@ -775,8 +831,16 @@ h2.center {
 
 .project-image {
     width: 100%;
-    height: 400px; /* Increased height for more image space */
-    object-fit: fill; /* Ensures the image maintains aspect ratio while covering the area */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    max-height: 400px; /* Maximum height to avoid excessive stretching */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        height: 250px; /* Adjust height for mobile devices */
+        max-height: 250px; /* Ensure it doesn't exceed this height */
+    }
 }
 
 .project-content {
@@ -1001,7 +1065,7 @@ body {
 
 .titles{
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     color: #14E956;
 }
 
@@ -1143,4 +1207,37 @@ audio {
 .highlight {
     font-weight: bold;
     font-style: italic;
+}
+
+/* Container for the typewriter text */
+#typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensures full-width on any device */
+    height: auto; /* Adjust height as needed */
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styling for the typewriter text */
+#typing-text {
+    font-size: 3.0rem; /* Responsive font size */
+    color: #b4b4b4;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Adjust font size on smaller devices */
+@media (max-width: 768px) {
+    #typing-text {
+        font-size: 2.5rem; /* Smaller font size for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    #typing-text {
+        font-size: 1.2rem; /* Even smaller font size for very small devices */
+    }
 }

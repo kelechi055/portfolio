@@ -1,12 +1,14 @@
 
- window.addEventListener('load', function () {
+
+window.addEventListener('load', function () {
     const loader = document.querySelector('.loader');
     loader.classList.add('fadeOut'); 
     setTimeout(() => {
         loader.style.display = 'none';
         document.body.classList.add('loaded');
-    }, 500); 
+    }, 1000); 
 });
+
 
 const navLinks = document.querySelectorAll('.navbar a');
     
@@ -45,10 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const texts = [
-    "a {CompSci Student.}",
-    "a <Software Dev/>.",
-    "a /Graphic Designer",
-    "a [Content Creator]"
+    "a CompSci Student.",
+    "a <Web Developer/>.",
+    "a {Software Engineer}.",
+    "a /Graphic Designer.",
+    "a [Content Creator]."
 ];
 
 let count = 0;
@@ -71,7 +74,7 @@ let letter = '';
         setTimeout(() => {
             document.getElementById('typing-text').textContent = '';
             type();
-        }, 1000); // Wait for 2 seconds before starting to type the next sentence
+        }, 1000); // Wait for 1 second before starting to type the next sentence
     } else {
         setTimeout(type, 100); 
     }
@@ -87,3 +90,4 @@ document.addEventListener('mousemove', (event) => {
     const background = document.getElementById('background');
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
 });
+
