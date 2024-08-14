@@ -36,10 +36,6 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- LOADING ANIMATION -->
-    <div class="loader">
-        <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Loading..." />
-    </div>
     <!-- KO LOGO -->
     <header class="header">
         <h1>
@@ -71,7 +67,7 @@
     </header>
     
     <!--HI MESSAGE-->
-    <h2 class="center">
+    <h2 class="center" style="animation: none;">
         <iframe class="pdf-container" src="https://drive.google.com/file/d/15GgfSMX02Zb84fwQE4lEHYn5ZrKAFEH1/preview"></iframe>
 
     
@@ -98,7 +94,29 @@
         </ul>
     </nav>
 </h2>
-    
+<script>
+    // Select all images
+    const images = document.querySelectorAll('.image');
+
+    images.forEach(image => {
+        // Prevent right-click context menu on images
+        image.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevent drag and drop
+        image.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Prevent right-click context menu on the entire page
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+</script>
     <script src="script.js"></script>
 </body>
     

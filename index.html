@@ -23,7 +23,7 @@
       gtag('config', 'G-FYR78R9WE0');
     </script>
 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kelechi Opurum">
@@ -91,7 +91,7 @@
         </h3>
     </div>
     <div class="footer">
-        <footer>&copy; Kelechi Opurum 2024. All rights reserved. | Built with HTML, CSS, and JS</footer>
+        <footer>&copy; Kelechi Opurum 2024. All rights reserved. | Built from scratch with HTML, CSS, and JS</footer>
     </div>
 
     
@@ -122,7 +122,29 @@
     </ul>
 </nav>
 
-    
+<script>
+    // Select all images
+    const images = document.querySelectorAll('.image');
+
+    images.forEach(image => {
+        // Prevent right-click context menu on images
+        image.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevent drag and drop
+        image.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Prevent right-click context menu on the entire page
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+</script>
     <script src="script.js"></script>
 </body>
 

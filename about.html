@@ -39,10 +39,6 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- LOADING ANIMATION -->
-    <div class="loader">
-        <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Kelechi Opurum" />
-    </div>
 
     <!-- KO LOGO -->
     <header class="header">
@@ -239,13 +235,11 @@
 
 
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const loader = document.querySelector(".loader");
-            loader.style.opacity = "0";
-            loader.style.transition = "opacity 1s";
-            setTimeout(() => loader.style.display = "none", 1000);
+            loader.style.display = "none"; // Hide the loader immediately
         });
     </script>
     <script>
@@ -271,5 +265,6 @@
             }
         });
     </script>
+    
 </body>
 </html>

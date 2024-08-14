@@ -641,7 +641,11 @@ h4 {
 }
 
 .project-card:nth-of-type(3) {
-    animation: slideUp 1s ease-in-out;
+    animation: slideUp 5s ease-in-out;
+}
+
+.project-card:nth-of-type(4) {
+    animation: slideUp 5s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -849,7 +853,7 @@ h4 {
 }
 
 .project-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 10px 0 5px; /* Reduced margin above the title */
     font-weight: bold;
 }
@@ -890,7 +894,7 @@ h4 {
     border-radius: 20px;
     font-weight: bold;
     margin: 10px 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none; /* Remove underline from the link */
 }
@@ -973,6 +977,8 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
+
+
 
 
 body {
