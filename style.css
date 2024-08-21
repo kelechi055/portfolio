@@ -696,18 +696,71 @@ h4 {
 }
 
 
+.contact-section {
+    font-size: 1.5rem; /* Default font size */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding around the section */
+}
+
+.contact-text {
+    margin: 0; /* Remove default margin */
+}
+
+.contact-link {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.contact-icon {
+    width: 30px; /* Default width for the icon */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-left: 8px; /* Space between text and icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        font-size: 1.2rem; /* Smaller font size on smaller screens */
+    }
+
+    .contact-icon {
+        width: 25px; /* Smaller icon size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        font-size: 1rem; /* Even smaller font size on very small screens */
+    }
+
+    .contact-icon {
+        width: 20px; /* Further reduce icon size on very small screens */
+    }
+}
+
 
 /* Container for tech stack */
 .tech-stack {
-    margin-bottom: 10px; /* Reduced margin bottom */
-    color: #14e956;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Adjusted spacing */
-    margin-top: 30px; /* Top margin */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: center; /* Center items */
+    gap: 15px; /* Space between items */
+    margin-top: 30px; /* Margin at the top */
+    margin-bottom: 10px; /* Margin at the bottom */
+    font-family: 'Inter', sans-serif;
+    font-weight: 550;
+    color: #14e956;
 }
 
+.tech-stack span {
+    background-color: rgba(20, 233, 86, 0.1); /* Light green background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px 12px; /* Padding inside each item */
+    font-size: 14px; /* Font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    border: 1px solid #14e956; /* Border with same color as text */
+}
 /* Heading for tech stack */
 .tech-stack h4 {
     text-align: center;
@@ -838,6 +891,10 @@ h4 {
     height: auto; /* Adjust height to maintain aspect ratio */
     max-height: 400px; /* Maximum height to avoid excessive stretching */
     object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
+}
+
+.project-image:hover {
+    
 }
 
 @media (max-width: 768px) {
