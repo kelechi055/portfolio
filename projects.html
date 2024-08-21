@@ -28,10 +28,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelechi's Portfolio - Projects</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Add any additional styles here if needed -->
     <style>
+        /* Popup background */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+        }
+
+        /* Popup content */
+        .popup-content {
+            background-color: #1D1D1F;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 30px;
+            width: 80%;
+            max-width: 900px;
+            position: center;
+        }
+
+        /* Close button */
+        .close {
+            color: #ff0000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(160, 15, 15);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Popup image */
+        #popup-image {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
+<body>
     <div class="background-gradient"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -83,7 +127,6 @@
                 <h3 class="project-title">🎮GameStock📈</h3>
                 <a class="placement-badge" href="https://devpost.com/software/gamestock-a8u7zm">🏆 Won 2nd Place at WeCracked Next.js Hackathon</a>
                 <p class="project-description">
-                    
                     Crafted a Next.js web app that simplifies video game stocks, delivering real-time news, stock prices, and financial insights through integrated APIs.
                 </p>
                 <div class="tech-stack">
@@ -167,7 +210,7 @@
     <section>
         <div class="gallery-title" style="font-size: 1.0rem; animation: reverse;">
             <div class="gallery-title" style="font-size: 1.0rem; animation: reverse; text-align: center;">
-                <h2 class="titles" style = "font-size: 1.3rem;">dont forget to check out my <a style="color: white; text-decoration: none;" href="resume.html">resume</a> too</h2>
+                <h2 class="titles" style = "font-size: 1.3rem;">don't forget to check out my <a style="color: white; text-decoration: none;" href="resume.html">resume</a> too</h2>
             </div>
         </div>
     </section>
@@ -201,12 +244,34 @@
         </ul>
     </nav>
 
-    <script>
-        // Select all images
-        const images = document.querySelectorAll('.image');
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Project Image">
+        </div>
+    </div>
 
-        images.forEach(image => {
-            // Prevent right-click context menu on images
+    <script>
+        // Select all project images
+        const projectImages = document.querySelectorAll('.project-image');
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+
+        projectImages.forEach(image => {
+            image.addEventListener('click', function() {
+                // Set popup image source and display the popup
+                popupImage.src = this.src;
+                popup.style.display = 'block';
+            });
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        // Prevent right-click context menu on images
+        projectImages.forEach(image => {
             image.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
             });

@@ -91,3 +91,42 @@ document.addEventListener('mousemove', (event) => {
     background.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0.6) ${radius}px, rgba(0, 0, 0, 0.9) ${radius * 2}px)`;
 });
 
+//popup
+
+const popup = document.getElementById('popup');
+const closeBtn = document.querySelector('.popup .close');
+const popupImage = document.getElementById('popup-image');
+const popupDetails = document.getElementById('popup-details');
+
+// Function to open the popup
+function openPopup(imageSrc, details) {
+    popupImage.src = imageSrc;
+    popupDetails.innerHTML = details;
+    popup.style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+    popup.style.display = 'none';
+}
+
+// Attach click event listeners to project images
+document.querySelectorAll('.project-card img').forEach(img => {
+    img.addEventListener('click', function() {
+        // Retrieve project details from parent .project-card
+        const projectCard = this.closest('.project-card');
+        const details = projectCard.querySelector('.project-description').innerHTML;
+        openPopup(this.src, details);
+    });
+});
+
+// Close the popup when clicking on the close button
+closeBtn.addEventListener('click', closePopup);
+
+// Close the popup when clicking outside of the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+        closePopup();
+    }
+});
+
