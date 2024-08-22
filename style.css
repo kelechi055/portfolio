@@ -37,6 +37,37 @@ img {
     transition: transform 0.1s ease;
 }
 
+
+/* Navbar styles */
+
+.rainbow-text {
+    background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    animation: rainbow-animation 5s linear infinite;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.rainbow-text:hover {
+    scale: 1.1;
+}
+
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 .purpletext {
     color: #5A377B
 }
