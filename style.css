@@ -46,7 +46,7 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
-    animation: rainbow-animation 5s linear infinite;
+    animation: rainbow-animation 10s linear infinite;
     font-weight: bold;
     font-style: italic;
 }
