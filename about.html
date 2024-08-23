@@ -232,7 +232,34 @@
     </div>
 </section>
 
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const items = document.querySelectorAll('.gallery-item');
+    
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    
+      function checkItems() {
+        items.forEach(item => {
+          if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+            item.classList.add('slide-up');
+            item.classList.add('viewed');
+          }
+        });
+      }
+    
+      window.addEventListener('scroll', checkItems);
+      window.addEventListener('resize', checkItems); // Optional: handle resize events
+      checkItems(); // Check items on initial load
+    });
+    </script>
 
 
 <!-- JavaScript -->

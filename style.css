@@ -219,6 +219,17 @@ body.loaded {
     text-align: center; /* Center text inside */
   }
 
+
+  .project-card-3.slide-up {
+    animation: slideUp 2s forwards;
+}
+  .project-card-4.slide-up {
+    animation: slideUp 2s forwards;
+}
+.project-card-5.slide-up {
+    animation: slideUp 2s forwards;
+}
+
 .pdf-container {
     width:55%;
     max-height: 850px;
@@ -227,7 +238,7 @@ body.loaded {
     justify-content: center;
     margin: 0 auto;
     display: block;
-    animation: none;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .header {
@@ -664,32 +675,28 @@ h4 {
 
 
   .project-card:nth-of-type(1) {
-    animation: slideInFromLeft 1.5s ease-in-out;
+    animation: slideInFromLeft 2s ease-in-out;
 }
 
 .project-card:nth-of-type(2) {
-    animation: slideInFromRight 1.5s ease-in-out;
+    animation: slideInFromRight 2s ease-in-out;
 }
 
-.project-card:nth-of-type(3) {
-    animation: slideUp 5s ease-in-out;
-}
-
-.project-card:nth-of-type(4) {
-    animation: slideUp 5s ease-in-out;
-}
-
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
 @media (max-width: 768px) {
     .project-card:nth-of-type(1) {
-        animation: slideInFromLeft 1.5s ease-in-out;
+        animation: slideUp 1s ease-in-out;
     }
 
     .project-card:nth-of-type(2) {
-        animation: slideInFromRight 1.5s ease-in-out;
+        animation: slideUp 1s ease-in-out;
     }
 
     .project-card:nth-of-type(3) {
-        animation: slideUp 1.2s ease-in-out; /* Adjusted duration for mobile */
+        animation: slideUp 2s ease-in-out; /* Adjusted duration for mobile */
     }
 }
 
