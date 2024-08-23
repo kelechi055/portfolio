@@ -370,6 +370,32 @@ h4 {
     z-index: 1000;
 }
 
+.arrow {
+    position: fixed;
+    top: 370px; /* Position vertically */
+    left: 1700px; /* Position horizontally */
+    width: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    margin-left: 10px; /* Space between the arrow and the preceding element */
+    animation: moveRight 2s infinite ease-in-out; /* Apply the animation */
+}
+
+
+@keyframes moveRight {
+    0% { transform: translateX(0); opacity: 1; }
+    25% { transform: translateX(10px); opacity: 0.5; } /* Move right and fade */
+    50% { transform: translateX(0); opacity: 1; } /* Return to original position */
+    75% { transform: translateX(10px); opacity: 0.5; } /* Move right again */
+    100% { transform: translateX(0); opacity: 1; } /* Return to original position */
+}
+
+
 /* Ensure items are centered and have spacing */
 .navbar ul {
     list-style-type: none;
@@ -685,7 +711,7 @@ h4 {
 .slide-up {
     animation: slideUp 0.6s ease-out;
   }
-  
+
 @media (max-width: 768px) {
     .project-card:nth-of-type(1) {
         animation: slideUp 1s ease-in-out;
@@ -1144,6 +1170,26 @@ body {
     
 }
 
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); /* Adjust the distance as needed */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the down-arrows */
+.down-arrows {
+    display: block;
+    margin: 0 auto;
+    animation: slideUpDown 1s infinite; /* Adjust the duration as needed */
+    /* Optional: add a shadow to make it more noticeable */
+}
+
 .tech-stack img {
     width: 60px;
     height: 60px;
@@ -1160,7 +1206,7 @@ body {
 }
 
 .tech-stack img:hover {
-    transform: translateY(-5px);
+    transform: scale(1.1);
 }
 
 
@@ -1339,6 +1385,6 @@ audio {
 
 @media (max-width: 480px) {
     #typing-text {
-        font-size: 1.2rem; /* Even smaller font size for very small devices */
+        font-size: 1.6rem; /* Even smaller font size for very small devices */
     }
 }
