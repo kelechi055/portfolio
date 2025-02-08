@@ -722,7 +722,11 @@ h4 {
     }
 
     .project-card:nth-of-type(3) {
-        animation: slideUp 2s ease-in-out; /* Adjusted duration for mobile */
+        animation: slideUp 2s ease-in-out; 
+    }
+
+    .project-card:nth-of-type(4) {
+        animation: slideUp 2s ease-in-out; 
     }
 }
 
