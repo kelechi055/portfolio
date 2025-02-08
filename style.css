@@ -841,13 +841,10 @@ h4 {
 .tech-stack img {
     width: 60px;
     height: 60px;
-    transition: transform 1s ease-in-out, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     border-radius: 8px;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
-    animation: slideUp 2s ease-out forwards; /* make sure that the animation stays in the final state */
-    opacity: 0; /* the original opacity */
-    transform: translateY(20px) ease-in-out; /* Initial position */
-    
+    animation: slideUp 1s ease-out forwards;
 }
 
 /* Hover effect for my techstack */
@@ -1210,7 +1207,8 @@ body {
 }
 
 .tech-stack img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important; /* Slightly enlarges the icon */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
 }
 
 
