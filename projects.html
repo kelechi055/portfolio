@@ -28,7 +28,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelechi's Portfolio - Projects</title>
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         /* Popup background */
         .popup {
             display: none; /* Hidden by default */
@@ -118,14 +124,49 @@
     <h2 class="center">My Projects</h2>
 
     <div class="projects-container">
+
         <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img class="project-image" src="images/bucketshowcase.png" alt="Bucket Project Image">
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Bucket 🪣</h3>
+                <a class="placement-badge" href="https://trybucket.vercel.app" target="_blank">
+                    🏆 1st Place Overall & AI/ML Winner @ HackHounds 2025
+                </a>
+                <p class="project-description">
+                    Gemini-powered bucket list generator that curates personalized recommendations based on your location, interests, and budget.
+                </p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>Framer</span>
+                    <span>React.js</span>
+                    <span>Next.js</span>
+                    <span>Gemini</span>
+                    <span>Material-UI</span>
+                    <span>Tailwind CSS</span>
+                    <span>Firebase</span>
+                    <span>Clerk</span>
+                  </div>
+                  
+                <div class="project-links">
+                    <a class="project-link" href="https://devpost.com/software/bucket-3hzwcf" target="_blank">Devpost</a>
+                    <a class="project-link" href="https://trybucket.vercel.app" target="_blank">Live Website</a>
+                    <a class="project-link" href="https://github.com/kelechi055/bucket" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
         <div class="project-card">
             <div class="project-image-container">
                 <img class="project-image" src="images/showcase.png" alt="GameStock Project Image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">🎮GameStock📈</h3>
-                <a class="placement-badge" href="https://devpost.com/software/gamestock-a8u7zm">🏆 Won 2nd Place at WeCracked Next.js Hackathon</a>
+                <h3 class="project-title">GameStock🎮📈</h3>
+                <a class="placement-badge" href="https://devpost.com/software/gamestock-a8u7zm">🏆 2nd Place @ WeCracked Next.js Hackathon 2024</a>
                 <p class="project-description">
                     Crafted a Next.js web app that simplifies video game stocks, delivering real-time news, stock prices, and financial insights through integrated APIs.
                 </p>
@@ -147,11 +188,12 @@
             <img class="project-image" src="images/cardwiz.png" alt="VibeCheck Project Image">
             <div class="project-content">
                 <h3 class="project-title">Cardwiz🧙‍♂️</h3>
+                <a class="placement-badge" href="https://cardwiz-ai.vercel.app/">👤 Solo Project | 🔥34+ Signed-up Users</a>
                 <p class="project-description">
                     Engineered an AI-driven web app that generates flashcards from any content, utilizing Google’s Gemini AI and a full-stack architecture for seamless study and review.
                 </p>
                 <div class="tech-stack">
-                    <span>Gemini API</span>
+                    <span>Gemini</span>
                     <span>JavaScript</span>
                     <span>Next.js</span>
                     <span>React</span>
@@ -162,69 +204,98 @@
                 </div>
             </div>
         </div>
-<!-- Project 3 -->
-<div class="project-card">
-    <img class="project-image" src="images/DailyDoseShowCase.png" alt="DailyDose Project Image">
-    <div class="project-content">
-        <h3 class="project-title">Daily Dose</h3>
-        <p class="project-description">
-            A web app that inspires daily well-being by delivering curated motivational content and personalized journaling insights through AI-driven tone analysis.
-        </p>
-        <div class="tech-stack">
-            <span>Next.js</span>
-            <span>Tailwind CSS</span>
-            <span>OpenAI</span>
-            <span>AWS Dynamo</span>
-            <span>Chart.js</span>
-            <span>Node.js</span>
-            <span>NextAuth.js</span>
-            <span>AWS SES</span>
-        </div>
-        <div class="project-links">
-            <a class="project-link" href="https://www.getdailydose.me/" target="_blank">Live Website</a>
-            <a class="project-link" href="https://github.com/BG-legacy/Daily-Dose" target="_blank">GitHub Repo</a>
-        </div>
-    </div>
-</div>
- <!-- Project 4 -->
-<div class="project-card">
-    <img class="project-image" src="images/pantrackshowcase.png" alt="AI Pantry Tracker Project Image">
-    <div class="project-content">
-        <h3 class="project-title">🍳Pantrack</h3>
-        <p class="project-description">
-            Developed a real-time web app for effortless pantry item management, recipe discovery, and pantry tracking.
-        </p>
-        <div class="tech-stack">
-            <span>Spoontacular API</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>Firebase</span>
-        </div>
-        <div class="project-links">
-            <a class="project-link" href="https://pantrackapp.vercel.app/" target="_blank">Live Website</a>
-            <a class="project-link" href="https://github.com/kelechi055/pantrack" target="_blank">GitHub Repo</a>
-        </div>
-    </div>
-</div>
 
-<!-- Project 5-->
-<div class="project-card">
-    <img class="project-image" src="images/portfolioshowcase.png" alt="Portfolio Project Image">
-    <div class="project-content">
-        <h3 class="project-title">Portfolio Website (this page)</h3>
-        <p class="project-description">
-            Built a responsive portfolio website to showcase my skills, projects, featuring engaging content optimized for all devices.
-        </p>
-        <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img class="project-image" src="images/DailyDoseShowCase.png" alt="DailyDose Project Image">
+            <div class="project-content">
+                <h3 class="project-title">Daily Dose</h3>
+                <a class="placement-badge" href="https://www.daily-dose.me/">❄️ ColorStack Winterbreak Hackathon 2024</a>
+                <p class="project-description">
+                    A web app that inspires daily well-being by delivering curated motivational content and personalized journaling insights through AI-driven tone analysis.
+                </p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>Tailwind CSS</span>
+                    <span>OpenAI</span>
+                    <span>AWS Dynamo</span>
+                    <span>Chart.js</span>
+                    <span>Node.js</span>
+                    <span>NextAuth.js</span>
+                    <span>AWS SES</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://www.daily-dose.me/" target="_blank">Live Website</a>
+                    <a class="project-link" href="https://github.com/BG-legacy/Daily-Dose" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
         </div>
-        <div class="project-links">
-            <a class="project-link" href="https://kelechiopurum.vercel.app" target="_blank">Live Website</a>
-            <a class="project-link" href="https://github.com/kelechi055/portfolio" target="_blank">GitHub Repo</a>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img class="project-image" src="images/huzzhub.png" alt="HuzzHub Project Image">
+            <div class="project-content">
+                <h3 class="project-title">🧠 HuzzHub</h3>
+                <a class="placement-badge" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">
+                    🏆 Winner @ Brainrot Hackathon 2024 | ⭐ 300+ Visitors
+                </a>
+                <p class="project-description">
+                    A meme web app with "Chill Guy," an AI that delivers TikTok-style pickup lines using Next.js and Gemini API.
+                </p>
+                <div class="tech-stack">
+                    <span>Gemini</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://huzz-hub.vercel.app/" target="_blank">Live Website</a>
+                    <a class="project-link" href="https://github.com/kelechi055/HuzzHub" target="_blank">GitHub Repo</a>
+                    <a class="project-link" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">Devpost</a>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+            <img class="project-image" src="images/pantrackshowcase.png" alt="AI Pantry Tracker Project Image">
+            <div class="project-content">
+                <h3 class="project-title">🍳Pantrack</h3>
+                <a class="placement-badge" href="https://cardwiz-ai.vercel.app/">👤 Solo Project | 🔥56+ Signed-up Users</a>
+                <p class="project-description">
+                    Developed a real-time web app for effortless pantry item management, recipe discovery, and pantry tracking.
+                </p>
+                <div class="tech-stack">
+                    <span>Spoontacular API</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://pantrackapp.vercel.app/" target="_blank">Live Website</a>
+                    <a class="project-link" href="https://github.com/kelechi055/pantrack" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6-->
+        <div class="project-card">
+            <img class="project-image" src="images/portfolioshowcase.png" alt="Portfolio Project Image">
+            <div class="project-content">
+                <h3 class="project-title">💼My Portfolio</h3>
+                <a class="placement-badge" href="/">👤 Solo Project | ⭐400+ Visitors</a>
+                <p class="project-description">
+                    Built a responsive portfolio website to showcase my skills, projects, featuring engaging content optimized for all devices.
+                </p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://kelechiopurum.vercel.app" target="_blank">Live Website</a>
+                    <a class="project-link" href="https://github.com/kelechi055/portfolio" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
 </div>
     <!-- Navigation Bar -->
     <nav class="navbar">
