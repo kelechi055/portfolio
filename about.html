@@ -31,7 +31,13 @@
     <title>Kelechi's Portfolio - About</title>
     <link rel="stylesheet" href="style.css">
 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter';
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -155,22 +161,34 @@
         </a>
     </div>
     
-<!-- GALLERY SECTION -->
-<section id="gallery" class="gallery-section">
-    <div class="gallery-container">
-        <div class="gallery-title" style="font-size: 1.0rem;">
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+    
+        <!-- Gallery Title -->
+        <div class="gallery-title" style="font-size: 1.0rem;;">
             <h2 class="titles">gallery</h2>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/bg3.JPEG" width="300" height="450" alt="Image 3" draggable="false">
-            </div>
-            <div class="gallery-item">
-                <img src="images/bg4.JPEG" width="300" height="450" alt="Image 5" draggable="false">
-            </div>
-            <div class="gallery-item">
-                <img src="images/bg9.JPEG" width="300" height="450" alt="Image 6" draggable="false">
-            </div>
+
+        <div style="font-size: 0.5rem;">
+            <h2 style="animation: none !important; margin-bottom: 0;">Won 1st Place &amp; AI/ML Track @ <a href="https://devpost.com/software/bucket-3hzwcf" style="text-decoration: none; color:rgb(255, 255, 255);">HackHounds</a> 2025! 🏆</h2>
+        </div>
+        
+        <!-- Featured Image Section -->
+        <div class="featured-image">
+            <img src="images/groupflick.jpeg" style="border-radius: 20px;" width="100%" height="450" alt="Featured Image" draggable="false">
+        </div>
+
+        <!-- Featured Image Section -->
+        <div class="featured-image2" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 70px;">
+            <img src="images/1stplace.jpeg" width="100%" height="450" alt="Featured Image" draggable="false" style="border-radius: 20px;">
+            <img src="images/presentation.jpeg" width="100%" height="450" alt="Featured Image" draggable="false" style="border-radius: 20px;">
+        </div>
+
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" style="border-radius: 20px;">
+            <!-- Other Gallery Items -->
             <div class="gallery-item">
                 <img src="images/bg10.JPEG" width="300" height="400" alt="Image 12" draggable="false">
             </div>
@@ -184,14 +202,25 @@
                 <img src="images/img3.jpeg" width="300" height="400" alt="Image 14" draggable="false">
             </div>
             <div class="gallery-item">
-                <img src="images/bg12.JPEG" width="300" height="400" alt="Image 15" draggable="false">
+                <img src="images/fit.jpg" width="300" height="400" alt="Image 15" draggable="false">
             </div>
             <div class="gallery-item">
                 <img src="images/bg14.JPEG" width="300" height="400" alt="Image 16" draggable="false">
             </div>
+            <div class="gallery-item">
+                <img src="images/bg3.JPEG" width="300" height="450" alt="Image 3" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/fit2.jpg" width="300" height="450" alt="Image 5" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/bg9.JPEG" width="300" height="450" alt="Image 6" draggable="false">
+            </div>
         </div>
-    </div>
-</section>
+        </div>
+
+    </section>
+  
 
 <section>
     <div class="gallery-title" style="font-size: 1.0rem; animation: reverse;">
@@ -261,6 +290,35 @@
             }
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.gallery-item');
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+               
+                return (
+                    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom > 0
+                );
+            }
+
+            function checkItems() {
+                items.forEach(item => {
+                    if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+                        item.classList.add('slide-up');
+                        item.classList.add('viewed');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkItems);
+            window.addEventListener('resize', checkItems);
+            checkItems(); 
+        });
+    </script>
+
     
 </body>
 </html>
