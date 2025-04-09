@@ -139,6 +139,14 @@ img {
     position: absolute;
 }
 
+.btn-get-in-touch:hover {
+  background-color: #047857 !important;
+}
+
+.btn-view-projects:hover {
+    background-color: #1f1e1e !important;
+  }
+
 
 h2 {
     font-size: 3.0em;
@@ -1266,6 +1274,11 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
 }
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+  }
 
 .titles{
     font-size: 2.5em;
