@@ -121,7 +121,64 @@
     </header>
     
     <!--Projects Section-->
-    <h2 class="center">My Projects</h2>
+
+    <h2 style="
+        color: #FFFFFF;
+        animation: slideUp 2s forwards;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    ">
+    during my freetime, i build, deploy + scale🤘🏾🚀
+    </h2>
+
+    <!-- my projects stats section ;) -->
+    <div class="stats-section">
+        <div class="stats-grid">
+        <div class="stat-item" data-value="100">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="users-icon">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="8" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Total Users</div>
+        </div>
+        <div class="stat-item" data-value="5000">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Page Views</div>
+        </div>
+        <div class="stat-item" data-value="7">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="code-icon">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item" data-value="4">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="award-icon">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Awards</div>
+        </div>
+        </div>
+    </div>
 
     <div class="projects-container">
 
@@ -295,8 +352,9 @@
                     <a class="project-link" href="https://kelechiopurum.vercel.app" target="_blank">Live Website</a>
                     <a class="project-link" href="https://github.com/kelechi055/portfolio" target="_blank">GitHub Repo</a>
                 </div>
-            </div>
+            </div>   
 </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <ul>
@@ -328,64 +386,74 @@
             <img id="popup-image" src="" alt="Project Image">
         </div>
     </div>
-
-
+    
+    <!--STATS SECTION SCRIPT-->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.project-card');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('slide-up');
-                        observer.unobserve(entry.target); // Stop observing once the animation is added
-                    }
-                });
-            }, { threshold: 0.1 }); // Adjust threshold as needed
-
-            cards.forEach(card => {
-                observer.observe(card);
+        const statsItems = document.querySelectorAll('.stat-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStatItem(entry.target);
+                observer.unobserve(entry.target);
+            }
             });
+        }, { threshold: 0.1 });
+        
+        statsItems.forEach(item => {
+            observer.observe(item);
         });
-    </script>
-
-    <script>
-        // Select all project images
-        const projectImages = document.querySelectorAll('.project-image');
-        const popup = document.getElementById('popup');
-        const popupImage = document.getElementById('popup-image');
-
-        projectImages.forEach(image => {
-            image.addEventListener('click', function() {
-                // Set popup image source and display the popup
-                popupImage.src = this.src;
-                popup.style.display = 'block';
-            });
+        
+        document.querySelector('.stats-heading').classList.add('animate-in');
         });
 
-        function closePopup() {
-            popup.style.display = 'none';
+        function animateStatItem(statItem) {
+        statItem.style.opacity = '1';
+        statItem.style.transform = 'translateY(0)';
+        
+        const iconContainer = statItem.querySelector('.icon-container');
+        iconContainer.style.opacity = '1';
+        iconContainer.style.transform = 'scale(1)';
+        
+        const valueElement = statItem.querySelector('.stat-value');
+        const labelElement = statItem.querySelector('.stat-label');
+        
+        setTimeout(() => {
+            valueElement.style.opacity = '1';
+            valueElement.style.transform = 'translateY(0)';
+        }, 200);
+        
+        setTimeout(() => {
+            labelElement.style.opacity = '1';
+            labelElement.style.transform = 'translateY(0)';
+        }, 300);
+        
+        const finalValue = parseInt(statItem.dataset.value, 10);
+        animateCounter(valueElement, finalValue);
         }
 
-        // Prevent right-click context menu on images
-        projectImages.forEach(image => {
-            image.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-
-            // Prevent drag and drop
-            image.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-            });
-        });
-
-        // Prevent right-click context menu on the entire page
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
+        function animateCounter(element, finalValue) {
+        const duration = 2000; // 2 secs
+        const startTime = performance.now();
+        let currentValue = 0;
+        
+        function updateCounter(timestamp) {
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            currentValue = Math.floor(progress * finalValue);
+            element.textContent = currentValue.toLocaleString();
+            
+            if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+            } else {
+            element.textContent = finalValue.toLocaleString();
             }
-        });
+        }
+        
+        requestAnimationFrame(updateCounter);
+        }
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
