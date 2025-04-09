@@ -147,7 +147,7 @@
             <div class="stat-value">0</div>
             <div class="stat-label">Total Users</div>
         </div>
-        <div class="stat-item" data-value="5000">
+        <div class="stat-item" data-value="5600">
             <div class="icon-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
@@ -157,7 +157,7 @@
             <div class="stat-value">0</div>
             <div class="stat-label">Page Views</div>
         </div>
-        <div class="stat-item" data-value="7">
+        <div class="stat-item" data-value="10">
             <div class="icon-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="code-icon">
                 <polyline points="16 18 22 12 16 6"></polyline>
@@ -348,12 +348,9 @@
                     <span>HTML</span>
                     <span>CSS</span>
                 </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://kelechiopurum.vercel.app" target="_blank">Live Website</a>
-                    <a class="project-link" href="https://github.com/kelechi055/portfolio" target="_blank">GitHub Repo</a>
-                </div>
             </div>   
-</div>
+        </div>
+    </div>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -378,6 +375,81 @@
             </li>
         </ul>
     </nav>
+
+            <!-- Additional C2Action -->
+            <div style="padding-top: 1rem;">
+                <p style="color: #A7A7A7; margin-bottom: 1rem; font-size: 20px;">
+                    <h2 style="
+                        color: #FFFFFF;
+                        animation: slideUp 2s forwards;
+                        font-size: 3rem;
+                        font-weight: bold;
+                        margin-bottom: 1rem;
+                    ">
+                        curious?
+                    </h2>
+                </p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-bottom: 20px;">
+                <!-- Button 1 -->
+                <a href="mailto:kelechiopurum2005@gmail.com" class="btn-get-in-touch" style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem 1rem;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    border-radius: 0.375rem;
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: #059669;
+                    transition: background-color 0.3s ease;
+                    ">
+                    Get In Touch
+                </a>
+                </div>
+            </div>
+    
+            <!-- social media icons -->
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem; margin-bottom: 20px;">
+                <a href="https://github.com/kelechi055" target="_blank">
+                    <button style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="https://i.postimg.cc/XZNZcR3r/gitwhite.png" alt="GitHub" width="25" height="25">
+                    </button>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank">
+                    <button style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="https://i.postimg.cc/bsXsFDpc/linkedin-white.png" alt="LinkedIn" width="25" height="25">
+                    </button>
+                </a>
+                
+                <a href="mailto:kelechiopurum2005@gmail.com" target="_blank">
+                    <button class="slide-down;" style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="images/mail.png" alt="Email" width="25" height="25">
+                    </button>
+                </a>
+            </div>
 
     <!-- Popup -->
     <div id="popup" class="popup">
@@ -434,26 +506,83 @@
         }
 
         function animateCounter(element, finalValue) {
-        const duration = 2000; // 2 secs
-        const startTime = performance.now();
-        let currentValue = 0;
-        
-        function updateCounter(timestamp) {
-            const elapsed = timestamp - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            
-            currentValue = Math.floor(progress * finalValue);
-            element.textContent = currentValue.toLocaleString();
-            
-            if (progress < 1) {
+    const duration = 4000; // 2 secs
+    const startTime = performance.now();
+    let currentValue = 0;
+
+    function updateCounter(timestamp) {
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        currentValue = Math.floor(progress * finalValue);
+        element.textContent = currentValue.toLocaleString() + "+";
+
+        if (progress < 1) {
             requestAnimationFrame(updateCounter);
-            } else {
-            element.textContent = finalValue.toLocaleString();
-            }
+        } else {
+            element.textContent = finalValue.toLocaleString() + "+";
         }
-        
-        requestAnimationFrame(updateCounter);
-        }
+    }
+
+    requestAnimationFrame(updateCounter);
+}
+
     </script>
+
+    <script>
+        const images = document.querySelectorAll('.image');
+
+        images.forEach(image => {
+            image.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            image.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <script>
+        const projectImages = document.querySelectorAll('.project-image');
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+
+        projectImages.forEach(image => {
+            image.addEventListener('click', function() {
+                popupImage.src = this.src;
+                popup.style.display = 'block';
+            });
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        projectImages.forEach(image => {
+            image.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            // this prevents drag and drop
+            image.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+
+        // prevents right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
 </body>
 </html>
