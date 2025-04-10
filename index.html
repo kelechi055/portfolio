@@ -37,7 +37,9 @@
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ7BLPZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
   <!-- LOADER -->
   <div class="loader">
     <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Loading..." />
@@ -540,8 +542,9 @@
             margin-top: 80px;
             margin-bottom: 0;
             font-weight: 200;
+            color: #A7A7A7;
           ">
-            won 1st place overall &amp; ai/ml track @ <a href="https://devpost.com/software/bucket-3hzwcf" style="text-decoration: none; color:rgb(255, 255, 255);">hackhounds</a> 2025 🏆
+            🏆 won 1st place overall &amp; ai/ml track @ <a href="https://devpost.com/software/bucket-3hzwcf" style="text-decoration: none; color:rgb(255, 255, 255);">hackhounds</a> 2025
         </h2>
         
         <!-- Featured Image Section -->
@@ -1235,6 +1238,27 @@
         });
     </script>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.querySelector('.scroll-progress-bar');
+  
+  // Function to update progress bar
+  function updateProgressBar() {
+    const scrollPosition = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+    
+    progressBar.style.width = `${scrollPercentage}%`;
+  }
+  
+  // Listen for scroll events
+  window.addEventListener('scroll', updateProgressBar);
+  
+  // Initialize on page load
+  updateProgressBar();
+});
+    </script>
   <!-- NAVBAR // removed -->
 
   <!-- SCRIPTS -->
