@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <div id="background"></div>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PQ7BLPZZ');</script>
-    <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kelechi Opurum">
+  <title>Kelechi's Portfolio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYR78R9WE0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FYR78R9WE0');
+  </script>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PQ7BLPZZ');
+  </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYR78R9WE0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-FYR78R9WE0');
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kelechi Opurum">
-    <title>Kelechi's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ7BLPZZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ7BLPZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- LOADING ANIMATION -->
-    <div class="loader">
-        <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Loading..." />
-    </div>
+  <!-- LOADER -->
+  <div class="loader">
+    <img src="https://i.postimg.cc/X7H2JjW8/ko.png" alt="Loading..." />
+  </div>
+
+  <!--TOP NAVBAR-->
     <!-- KO LOGO -->
-    <header class="header">
+    <header class="header" id="home">
         <h1>
             <a href="index.html">
-                <img class="interactive-ko spin-on-hover" src="https://i.postimg.cc/BtPjgcWB/ko-white.png" alt="Kelechi Opurum" width="50" height="50">
+                <img class="interactive-ko spin-on-hover" src="https://i.postimg.cc/BtPjgcWB/ko-white.png" alt="Kelechi Opurum" width="50" height="50" style="outline: olivedrab;">
             </a>
         </h1>
         <!--SOCIALS-->
@@ -70,80 +73,1171 @@
             </a>
         </div>
     </header>
-    <!--HI MESSAGE-->
+
+  <!-- INDEX SECTION -->
+  <!-- Insert content from index.html (hero section, profile, greeting, etc.) -->
+    <!--MY FACE-->
     <div class="myface">
         <div class="myfaceimg">
             <img src="images/circlekel.png" width="200" height="200" alt="Profile Picture">
         </div>
     </div>
-    <div class="interactive-text-container">
-        <h2 class="interactive-text">
-            Hi. I'm Kelechi,<span class="green-text"> </span> <br>
-        
-            <div id="typing-container">
-                <div id="typing-text"></div>
+
+    <div class="interactive-text-container" style="margin-bottom: 0;">
+        <h2 class="interactive-text" style="font-size: 4rem; color: white;">
+            Hi, I'm <span style="color: #A855F7;">Kelechi</span> <br>
+            <div id="typing-container" style="margin-top: 6px;">
+                <div id="typing-text" style="font-size: 2.3rem; color: #9CA3AF; font-weight: lighter;"></div>
             </div>
         </h2>
-    <div class="center">
-        <!--ABOUT ME-->
-        <h3>
-            Driven by a passion for exploring and learning through <span class="rainbow-text">building.</span>
-        </h3>
+        
+        <div class="center" style="margin-bottom: 0;">
+            <!--ABOUT ME-->
+            <h3 style="margin-top: 0; color:white; font-weight: 350;">
+                Driven by a passion for exploring and learning through <span style="margin-bottom: 0; font-weight: 500; color: #A855F7;">building </span> <span class="fire-text">🔥</span>
+            </h3>
+        </div>
     </div>
+    
+    <button class="menu-toggle" aria-label="Open menu">
+        &#9776; <!-- This is a hamburger icon -->
+    </button>
+
+    <!--typrwriter script-->
+    <script src="script.js"></script>
+
+
+    <!--scroll button-->
+    <div class="center" style="margin-top: 100px;">
+        <a href="#about-me">
+            <img src="images/down-arrow.png" alt="Scroll Down Arrow" class="down-arrows" width="100px" style="margin-bottom: 50px;">
+        </a>
+    </div>
+
+  <!-- ABOUT SECTION -->
+
+      <!-- ABOUT ME SECTION -->
+      <section class="about-section" style="padding: 3rem 0;">
+        <div class="about-container" 
+            style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+        
+            <!-- About Me Title -->
+            <h2 id="about-me"class="interactive-text" style="
+                color: #FFFFFF;
+                animation: slideUp 2s forwards;
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                margin-top: 100px;
+            ">
+                a little about me 🫡<span class="green-text"></span> <br>
+                <div id="typing-container">
+                    <div id="typing-text"></div>
+                </div>
+            </h2>
+        </div>
+    
+        <div style="
+            background-color: rgba(39,39,42,0.5);
+            border: 1px solid #3f3f46;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            max-width: 48rem;
+            width: 100%;
+            animation: slideUp 1s forwards;
+        ">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Heading and Badges Row -->
+            <div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+                    <span style="
+                        background: #3A7AAC;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">Python</span>
+                    <span style="
+                        background: #c21010;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">Java</span>
+                    <span style="
+                        background: #00AAC4;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">React</span>
+                    <span style="
+                        background: #8E7E12;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">JavaScript</span>
+                    <span style="
+                        background: #2D79C7;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">TypeScript</span>
+                    <span style="
+                        background: #000000;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">Next.js</span>
+                    <span style="
+                        background: #3f3f46;
+                        padding: 0.3rem 0.75rem;
+                        border-radius: 0.375rem;
+                        font-size: 0.875rem;
+                    ">Web Development</span>
+                    <span style="
+                    background: #3f3f46;
+                    padding: 0.3rem 0.75rem;
+                    border-radius: 0.375rem;
+                    font-size: 0.875rem;
+                    ">+ More</span>
+                </div>
+            </div>
+    
+            <!-- My Main about me Paragraph -->
+            <p style="color: #A7A7A7; line-height: 1.6; margin-bottom: 0; font-size: 18px; font-weight: 300;" >
+                i'm currently pursuing computer science at Loyola university maryland while working as a web developer
+                cntern at cybervillage networkers. as someone passionate about building innovative web solutions, i'm constantly
+                exploring new technologies and methodologies to enhance my programming toolkit.
+            </p>
+    
+            <!-- My Experience Block (main)-->
+            <div>
+                <h3 style="font-size: 1.525rem; font-weight: 500; margin-bottom: 1px; margin-top: 15px; color: #fff;">Experience</h3>
+                <div style="
+                background-color: rgba(63,63,70,0.2);
+                border-radius: 0.375rem;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                ">
+            
+                <!-- Experience 1 Block: Incoming :D -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
+                    <div>
+                    <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">
+                        Software Engineer Intern
+                    </h5>
+                    <p style="color: #a1a1aa; font-size: 0.875rem; text-align: left; display: flex; align-items: center;">
+                        <a href="https://www.arm.com/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                          <img src="images/arm-favicon.png" alt="Arm" style="width: 16px; height: 16px; margin-right: 4px;">
+                          Arm
+                        </a>
+                      </p>
+                      
+                    </div>
+                    <span style="
+                        background-color: rgba(59,130,246,0.125);
+                        color: #3b82f6;
+                        border: 1px solid rgba(59,130,246,0.2);
+                        border-radius: 0.375rem;
+                        padding: 0.25rem 0.5rem;
+                        font-size: 0.875rem;
+                        margin-left: auto;
+                        display: inline-flex;
+                        align-items: center;
+                    ">
+                    <!-- Static dot -->
+                    <span style="
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #3b82f6;
+                        border-radius: 50%;
+                        margin-right: 4px;
+                    "></span>
+                    Incoming Summer 2025
+                    </span>
+                </div>
+            
+                <!-- Experience 2 Block: Current -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+                    <div>
+                    <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem; text-align: left;">
+                        Web Developer Intern
+                    </h5>
+                    <p style="color: #a1a1aa; font-size: 0.875rem; text-align: left; display: flex; align-items: flex-start;">
+                        <a href="https://www.linkedin.com/company/cybervillage-networkers-inc./posts/?feedView=all" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                          <img src="images/cvni-favicon.png" alt="CyberVillage Networkers, Inc" style="width: 16px; height: 16px; margin-right: 4px;">
+                          CyberVillage Networkers, Inc
+                        </a>
+                      </p>
+                      
+                    </div>
+                    <span style="
+                    background-color: rgba(16,185,129,0.125);
+                    color: #4ade80;
+                    border: 1px solid rgba(16,185,129,0.2);
+                    border-radius: 0.375rem;
+                    padding: 0.25rem 0.5rem;
+                    font-size: 0.875rem;
+                    margin-left: auto;
+                    margin-top: 5px;
+                    display: inline-flex;
+                    align-items: center;
+                  ">
+                    <!-- Blinking dot for current experience :) -->
+                    <span style="
+                      display: inline-block;
+                      width: 8px;
+                      height: 8px;
+                      background-color: #4ade80;
+                      border-radius: 50%;
+                      margin-right: 4px;
+                      animation: blink 1.5s infinite;
+                    "></span>
+                    Jan 2025 - Present
+                  </span>
+                </div>
+            
+                <!-- Experience 3 Block: Previous -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+                    <div>
+                    <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">
+                        Software Engineer Intern
+                    </h5>
+                    <p style="color: #a1a1aa; font-size: 0.875rem; text-align: left; display: flex; align-items: center;">
+                        <a href="https://www.linkedin.com/company/openqquantify/posts/?feedView=all" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                          <img src="images/openq-favicon.png" alt="OpenQQuantify" style="width: 16px; height: 16px; margin-right: 4px;">
+                          OpenQQuantify
+                        </a>
+                      </p>                      
+                    </div>
+                    <span style="
+                        background-color: rgba(107,114,128,0.125);
+                        color: #6b7280;
+                        border: 1px solid rgba(107,114,128,0.2);
+                        border-radius: 0.375rem;
+                        padding: 0.25rem 0.5rem;
+                        font-size: 0.875rem;
+                        margin-left: auto;
+                        display: inline-flex;
+                        align-items: center;
+                    ">
+                    <!-- Static Dot for Previous experience -->
+                    <span style="
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #6b7280;
+                        border-radius: 50%;
+                        margin-right: 4px;
+                    "></span>
+                    Sep 2024 - Dec 2024
+                    </span>
+                </div>
+  
+            
+                <!-- Experience 4 Block: Previous - BVCC -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+                    <div>
+                    <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.0625rem; text-align: left;">
+                        Software Engineering Fellow
+                    </h5>
+                    <p style="color: #a1a1aa; font-size: 0.875rem; text-align: left; display: flex; align-items: center;">
+                        <a href="https://www.bvcc.vc/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                        <img src="images/bvcc-favicon.png" alt="Black Venture Capital Consortium" style="width: 16px; height: 16px; margin-right: 4px;">
+                        Black Venture Capital Consortium
+                        </a>
+                    </p>
+                    </div>
+                    <span style="
+                        background-color: rgba(107,114,128,0.125);
+                        color: #6b7280;
+                        border: 1px solid rgba(107,114,128,0.2);
+                        border-radius: 0.375rem;
+                        padding: 0.25rem 0.5rem;
+                        font-size: 0.875rem;
+                        margin-left: auto;
+                        display: inline-flex;
+                        align-items: center;
+                    ">
+                    <!-- Static Dot -->
+                    <span style="
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #6b7280;
+                        border-radius: 50%;
+                        margin-right: 4px;
+                    "></span>
+                    Sep 2024 - Dec 2024
+                    </span>
+                </div>
+  
+                <!-- Experience 5 Block: Previous - Headstarter -->
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+                    <div>
+                    <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.0625rem; text-align: left;">
+                        Software Engineering Fellow
+                    </h5>
+                    <p style="color: #a1a1aa; font-size: 0.875rem; text-align: left; display: flex; align-items: center;">
+                        <a href="https://headstarter.co/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+                        <img src="images/headstarter-favicon.png" alt="Headstarter" style="width: 16px; height: 16px; margin-right: 4px;">
+                        Headstarter
+                        </a>
+                    </p>
+                    </div>
+                    <span style="
+                        background-color: rgba(107,114,128,0.125);
+                        color: #6b7280;
+                        border: 1px solid rgba(107,114,128,0.2);
+                        border-radius: 0.375rem;
+                        padding: 0.25rem 0.5rem;
+                        font-size: 0.875rem;
+                        margin-left: auto;
+                        display: inline-flex;
+                        align-items: center;
+                    ">
+                    <!-- Static Dot -->
+                    <span style="
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background-color: #6b7280;
+                        border-radius: 50%;
+                        margin-right: 4px;
+                    "></span>
+                    Sep 2024 - Dec 2024
+                    </span>
+                </div>  
+  
+            <!-- Additional C2Action -->
+            <div style="padding-top: 1rem;">
+                <p style="color: #A7A7A7; margin-bottom: 1rem; font-size: 20px; font-weight: 300; text-align: center;">
+                as an eager learner, i continually seek opportunities to expand my skills and grow as a programmer
+                and student. feel free to <a href="https://www.linkedin.com/in/kelechi-opurum/" 
+                style="color: #A855F7; text-decoration: none; ">reach out</a> if you have any exciting opportunities or just want to connect!
+                </p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 0.75rem; text-align: center;">
+                    <!-- Button 1 -->
+                    <a href="mailto:kelechiopurum2005@gmail.com" class="btn-get-in-touch purple-fire-link" style="
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.5rem 1rem;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        border-radius: 0.375rem;
+                        text-decoration: none;
+                        color: #fff;
+                        background-color: #A855F7;
+                        transition: background-color 0.3s ease;
+                        margin-top: 20px;
+                    ">
+                        Get In Touch
+                    </a>
+                </div>
+                
+            </div>
+    
+            <!-- social media icons -->
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+                <a href="https://github.com/kelechi055" target="_blank">
+                    <button style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="https://i.postimg.cc/XZNZcR3r/gitwhite.png" alt="GitHub" width="25" height="25">
+                    </button>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank">
+                    <button style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="https://i.postimg.cc/bsXsFDpc/linkedin-white.png" alt="LinkedIn" width="25" height="25">
+                    </button>
+                </a>
+                
+                <a href="mailto:kelechiopurum2005@gmail.com" target="_blank">
+                    <button class="slide-down;" style="
+                    background: transparent;
+                    border: none;
+                    color: #fff;
+                    border-radius: 9999px;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    ">
+                        <img src="images/mail.png" alt="Email" width="25" height="25">
+                    </button>
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+  
+
+    
+    <!-- TECH STACK -->
+
+    
+    <h2 style="
+        color: #FFFFFF;
+        animation: slideUp 2s forwards;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 100px;
+    ">
+    technologies i usually build with 🔨
+    </h2>
+    <!-- SEPARATE HERE WITH SPACE -->
+    <div class="tech-stack" style="margin-bottom: 0;"> 
+        <div class="tech-stack-row" style="margin-bottom: 40px;">
+            <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" class="icon" title = 'Python'/>
+            <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" class="icon" title = 'JavaScript'/>
+            <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" class="icon" title = 'TypeScript'/>
+            <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" class="icon" title = 'React' />
+            <br>
+            <div style="display: flex;"></div><img src="images/html.png" width="60" height="60" title="HTML"/>
+            <img src="images/css.png" width="60" height="60" title="CSS"/>
+            <img src="images/nextjs.png" width="200" height="200" title="NextJS"/>
+            <img src="images/tailwind.png" width="300" height="200" title="Tailwind CSS"/>
+            <br>
+            <img src="images/visual-studio-code.png" width="350" height="100" title="VS Code"/>
+            <img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" class="icon" title = 'GitHub' />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" width="60" height="60" title="Vercel"/>
+            <img src="images/firebase.png" width="60" height="60" title="Firebase"/>
+            <br>
+
+            <img src="images/framer.png" alt="icon" class="icon" title = 'Framer' />
+            <img src="images/figma.png" alt="icon" class="icon" title = 'Figma' width="100%" height="100%"/>
+            <img src="images/clerk.png" alt="icon" class="icon" title = 'Clerk' />
+            <img src="images/stripe.png" alt="icon" class="icon" title = 'Stripe' />
+
+        </div>
+    </div>
+    
+    </div>
+    
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-container">
+    
+
+        <h2 style="
+            animation: none !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 80px;
+            margin-bottom: 0;
+            font-weight: 200;
+          ">
+            won 1st place overall &amp; ai/ml track @ <a href="https://devpost.com/software/bucket-3hzwcf" style="text-decoration: none; color:rgb(255, 255, 255);">hackhounds</a> 2025 🏆
+        </h2>
+        
+        <!-- Featured Image Section -->
+        <div class="featured-image">
+            <img src="images/groupflick.jpeg" style="border-radius: 20px;" width="100%" height="450" alt="Featured Image" draggable="false">
+        </div>
+
+        <!-- Featured Image Section -->
+        <div class="featured-image2" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 70px;">
+            <img src="images/1stplace.jpeg" width="100%" height="450" alt="Featured Image" draggable="false" style="border-radius: 20px;">
+            <img src="images/presentation.jpeg" width="100%" height="450" alt="Featured Image" draggable="false" style="border-radius: 20px;">
+        </div>
+
+        <h2 style="
+        color: #FFFFFF;
+        animation: slideUp 2s forwards;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 100px;
+        ">
+        coding isn’t my only canvas
+        </h2>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" style="border-radius: 20px;">
+            <!-- Other Gallery Items -->
+            <div class="gallery-item">
+                <img src="images/bg10.JPEG" width="300" height="400" alt="Image 12" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img1.jpeg" width="30" height="450" alt="Image 7" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/bg11.JPEG" width="300" height="400" alt="Image 13" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/img3.jpeg" width="300" height="400" alt="Image 14" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/fit.jpg" width="300" height="400" alt="Image 15" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/bg14.JPEG" width="300" height="400" alt="Image 16" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/bg3.JPEG" width="300" height="450" alt="Image 3" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/fit2.jpg" width="300" height="450" alt="Image 5" draggable="false">
+            </div>
+            <div class="gallery-item">
+                <img src="images/bg9.JPEG" width="300" height="450" alt="Image 6" draggable="false">
+            </div>
+        </div>
+        </div>
+
+    </section>
+  
+    <section>
+        <div class="gallery-title" style="font-size: 1.0rem; animation: reverse;">
+            <div class="gallery-title" id="projects" style="font-size: 1.0rem; animation: reverse; text-align: center;">
+                <h2 style="
+                    color: #FFFFFF;
+                    animation: slideUp 2s forwards;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin-bottom: 50px;
+                    margin-top: 30px;
+                    font-weight: 200;
+                ">
+                    <span style="font-style: italic;"> but </span> when I'm
+                    <a style="font-weight: 600;">locked in...</a>
+                </h2>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Script for scrolling-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.gallery-item');
+        
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        
+        function checkItems() {
+            items.forEach(item => {
+            if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+                item.classList.add('slide-up');
+                item.classList.add('viewed');
+            }
+            });
+        }
+        
+        window.addEventListener('scroll', checkItems);
+        window.addEventListener('resize', checkItems); // handle resize events
+        checkItems(); // check items on initial load
+        });
+    </script>
+
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.querySelector(".loader");
+            loader.style.display = "none"; //hides the loader
+        });
+    </script>
+    <script>
+        // this will select all the images
+        const images = document.querySelectorAll('.image');
+
+        images.forEach(image => {
+            // no right click on images :)
+            image.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            // prevent users from dragging and dropping images
+            image.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+
+        // no right click on all images on the page
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.gallery-item');
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+               
+                return (
+                    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom > 0
+                );
+            }
+
+            function checkItems() {
+                items.forEach(item => {
+                    if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+                        item.classList.add('slide-up');
+                        item.classList.add('viewed');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkItems);
+            window.addEventListener('resize', checkItems);
+            checkItems(); 
+        });
+    </script>
+
+  <!-- PROJECTS SECTION -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Popup background */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+        }
+
+        /* Popup content */
+        .popup-content {
+            background-color: #1D1D1F;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 30px;
+            width: 80%;
+            max-width: 900px;
+            position: center;
+        }
+
+        /* Close button */
+        .close {
+            color: #ff0000;
+            float: right;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(160, 15, 15);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Popup image */
+        #popup-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+    <!--Projects Section-->
+
+    <h2 style="
+        color: #FFFFFF;
+        animation: slideUp 2s forwards;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    ">
+    i build, break, deploy + scale🤘🏾🚀
+    </h2>
+
+    <!-- my projects stats section ;) -->
+    <div class="stats-section">
+        <div class="stats-grid">
+        <div class="stat-item" data-value="100">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="users-icon">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="8" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Total Users</div>
+        </div>
+        <div class="stat-item" data-value="5600">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Page Views</div>
+        </div>
+        <div class="stat-item" data-value="10">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="code-icon">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item" data-value="4">
+            <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="award-icon">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            </div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Awards</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img class="project-image" src="images/bucketshowcase.png" alt="Bucket Project Image">
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Bucket 🪣</h3>
+                <a class="placement-badge" href="https://trybucket.vercel.app" target="_blank">
+                    🏆 1st Place & AI/ML Track Winner @ HackHounds 2025
+                </a>
+                <p class="project-description">
+                    Gemini-powered bucket list generator that curates personalized recommendations based on your location, interests, and budget.
+                </p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>Framer</span>
+                    <span>React.js</span>
+                    <span>Next.js</span>
+                    <span>Gemini</span>
+                    <span>Material-UI</span>
+                    <span>Tailwind CSS</span>
+                    <span>Firebase</span>
+                    <span>Clerk</span>
+                </div>
+                
+                <div class="project-links">
+                    <a class="project-link" href="https://devpost.com/software/bucket-3hzwcf" target="_blank">Devpost</a>
+                    <a class="project-link" href="https://trybucket.vercel.app" target="_blank" style="display: inline-flex; align-items: center; gap: 0.25rem;">
+                        Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </a>
+                      
+                    <a class="project-link" href="https://github.com/kelechi055/bucket" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-image-container">
+                <img class="project-image" src="images/showcase.png" alt="GameStock Project Image">
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">GameStock🎮📈</h3>
+                <a class="placement-badge" href="hhttps://main--gamestockwebsite.netlify.app/">🏆 2nd Place @ WeCracked Next.js Hackathon 2024</a>
+                <p class="project-description">
+                    Crafted a Next.js web app that simplifies video game stocks, delivering real-time news, stock prices, and financial insights through integrated APIs.
+                </p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Python</span>
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://devpost.com/software/gamestock-a8u7zm" target="_blank">Devpost</a>
+                    <a class="project-link" href="https://main--gamestockwebsite.netlify.app/" target="_blank">Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                    </a>
+                    <a class="project-link" href="https://github.com/saikrupa82/WeCrackedHackathon" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img class="project-image" src="images/cardwiz.png" alt="VibeCheck Project Image">
+            <div class="project-content">
+                <h3 class="project-title">Cardwiz🧙‍♂️</h3>
+                <a class="placement-badge" href="https://cardwiz-ai.vercel.app/">👤 Solo Project | 🔥40+ Signed-up Users</a>
+                <p class="project-description">
+                    Engineered an AI-driven web app that generates flashcards from any content, utilizing Google’s Gemini AI and a full-stack architecture for seamless study and review.
+                </p>
+                <div class="tech-stack">
+                    <span>Gemini</span>
+                    <span>JavaScript</span>
+                    <span>Next.js</span>
+                    <span>React</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://cardwiz-ai.vercel.app/" target="_blank">Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                    </a>
+                    <a class="project-link" href="https://github.com/kelechi055/cardwiz" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img class="project-image" src="images/DailyDoseShowCase.png" alt="DailyDose Project Image">
+            <div class="project-content">
+                <h3 class="project-title">Daily Dose</h3>
+                <a class="placement-badge" href="https://www.daily-dose.me/">❄️ ColorStack Winterbreak Hackathon 2024</a>
+                <p class="project-description">
+                    A web app that inspires daily well-being by delivering curated motivational content and personalized journaling insights through AI-driven tone analysis.
+                </p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>Tailwind CSS</span>
+                    <span>OpenAI</span>
+                    <span>AWS Dynamo</span>
+                    <span>Chart.js</span>
+                    <span>Node.js</span>
+                    <span>NextAuth.js</span>
+                    <span>AWS SES</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://www.daily-dose.me/" target="_blank">Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                    </a>
+                    </a>
+                    <a class="project-link" href="https://github.com/BG-legacy/Daily-Dose" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img class="project-image" src="images/huzzhub.png" alt="HuzzHub Project Image">
+            <div class="project-content">
+                <h3 class="project-title">😏HuzzHub</h3>
+                <a class="placement-badge" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">
+                    🏆 Winner @ Brainrot Hackathon 2024 | ⭐ 300+ Visitors
+                </a>
+                <p class="project-description">
+                    A meme web app with "Chill Guy," an AI that delivers TikTok-style pickup lines using Next.js and Gemini API.
+                </p>
+                <div class="tech-stack">
+                    <span>Gemini</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://huzz-hub.vercel.app/" target="_blank">Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                    </a>
+                    <a class="project-link" href="https://github.com/kelechi055/HuzzHub" target="_blank">GitHub Repo</a>
+                    <a class="project-link" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">Devpost</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+            <img class="project-image" src="images/pantrackshowcase.png" alt="AI Pantry Tracker Project Image">
+            <div class="project-content">
+                <h3 class="project-title">🍳Pantrack</h3>
+                <a class="placement-badge" href="https://cardwiz-ai.vercel.app/">👤 Solo Project | 🔥60+ Signed-up Users</a>
+                <p class="project-description">
+                    Developed a real-time web app for effortless pantry item management, recipe discovery, and pantry tracking.
+                </p>
+                <div class="tech-stack">
+                    <span>Spoontacular API</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Firebase</span>
+                </div>
+                <div class="project-links">
+                    <a class="project-link" href="https://pantrackapp.vercel.app/" target="_blank">Live Website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                    </a>
+                    <a class="project-link" href="https://github.com/kelechi055/pantrack" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6-->
+        <div class="project-card">
+            <img class="project-image" src="images/portfolioshowcase.png" alt="Portfolio Project Image">
+            <div class="project-content">
+                <h3 class="project-title">💼My Portfolio</h3>
+                <a class="placement-badge" href="/">👤 Solo Project | ⭐400+ Visitors</a>
+                <p class="project-description">
+                    Built a responsive portfolio website to showcase my skills, projects, featuring engaging content optimized for all devices.
+                </p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <!--scroll button-->
+    <div class="center" style="margin-top: 0;">
+        <a href="#home">
+            <img src="images/top-arrow.png" alt="Scroll Down Arrow" class="down-arrows" width="100px" style="margin-bottom: 0px; animation-duration: 1s;">
+        </a>
+    </div>
+
+        <!-- Additional C2Action -->
+        <div style="padding-top: 1rem;">
+            <p style="color: #A7A7A7; margin-bottom: 1rem; font-size: 20px;">
+                <h2 style="
+                    color: #FFFFFF;
+                    animation: slideUp 2s forwards;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    font-weight: 200;
+                ">
+                    curious? 👀
+                </h2>
+            </p>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-bottom: 20px;">
+            <!-- Button 1 -->
+            <a href="mailto:kelechiopurum2005@gmail.com" class="btn-get-in-touch purple-fire-link" style="
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                border-radius: 0.375rem;
+                text-decoration: none;
+                color: #fff;
+                background-color: #A855F7;
+                transition: background-color 0.3s ease;
+            ">
+                Get In Touch
+            </a>
+            </div>
+        </div>
+
+        <!-- social media icons -->
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem; margin-bottom: 20px;">
+            <a href="https://github.com/kelechi055" target="_blank">
+                <button style="
+                background: transparent;
+                border: none;
+                color: #fff;
+                border-radius: 9999px;
+                padding: 0.5rem;
+                cursor: pointer;
+                ">
+                    <img src="https://i.postimg.cc/XZNZcR3r/gitwhite.png" alt="GitHub" width="25" height="25">
+                </button>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank">
+                <button style="
+                background: transparent;
+                border: none;
+                color: #fff;
+                border-radius: 9999px;
+                padding: 0.5rem;
+                cursor: pointer;
+                ">
+                    <img src="https://i.postimg.cc/bsXsFDpc/linkedin-white.png" alt="LinkedIn" width="25" height="25">
+                </button>
+            </a>
+            
+            <a href="mailto:kelechiopurum2005@gmail.com" target="_blank">
+                <button class="slide-down;" style="
+                background: transparent;
+                border: none;
+                color: #fff;
+                border-radius: 9999px;
+                padding: 0.5rem;
+                cursor: pointer;
+                ">
+                    <img src="images/mail.png" alt="Email" width="25" height="25">
+                </button>
+            </a>
+        </div>
+
+    <!-- FOOTER -->
     <div class="footer">
         <footer>&copy; Kelechi Opurum 2025. All rights reserved. | Built from scratch with HTML, CSS, and JS</footer>
     </div>
 
-    
-<button class="menu-toggle" aria-label="Open menu">
-    &#9776; <!-- This is a hamburger icon -->
-</button>
-<!-- NAVIGATION BAR --> 
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Project Image">
+        </div>
+    </div>
 
-<img class = "arrow" src="images/arrow.png">
-<nav class="navbar">
-    <ul>
-        <li class="hover-image-container">
-            <a href="index.html" class="active">
-                <img src="https://i.postimg.cc/fTJy60BQ/home-white.png" alt="Home" class="trigger-image">
-                <img src="https://i.postimg.cc/hjPYRrkH/home-pop.png" alt="hover home" class="hover-image">
-            </a>
-        </li>
-        <li class="hover-image-container"><a href="about.html">
-            <img src="https://i.postimg.cc/PxyNkWgT/about-white.png" alt="About" class="trigger-image">
-            <img src="https://i.postimg.cc/BQsbrQtz/about-pop.png" alt="hover home" class="hover-image">
-        </a></li>
-        <li class="hover-image-container"><a href="projects.html">
-            <img src="https://i.postimg.cc/4yFdYJ40/projects-white.png" alt="Projects" class="trigger-image">
-            <img src="https://i.postimg.cc/90LjZzLz/projects-pop.png" alt="hover projects" class="hover-image">
-        </a></li>
-    </ul>
-</nav>
-
-<script>
-    // Select all images
-    const images = document.querySelectorAll('.image');
-
-    images.forEach(image => {
-        // Prevent right-click context menu on images
-        image.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
+    <!--STATS SECTION SCRIPT-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const statsItems = document.querySelectorAll('.stat-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStatItem(entry.target);
+                observer.unobserve(entry.target);
+            }
+            });
+        }, { threshold: 0.1 });
+        
+        statsItems.forEach(item => {
+            observer.observe(item);
+        });
+        
+        document.querySelector('.stats-heading').classList.add('animate-in');
         });
 
-        // Prevent drag and drop
-        image.addEventListener('dragstart', function(e) {
-            e.preventDefault();
-        });
-    });
-
-    // Prevent right-click context menu on the entire page
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG') {
-            e.preventDefault();
+        function animateStatItem(statItem) {
+        statItem.style.opacity = '1';
+        statItem.style.transform = 'translateY(0)';
+        
+        const iconContainer = statItem.querySelector('.icon-container');
+        iconContainer.style.opacity = '1';
+        iconContainer.style.transform = 'scale(1)';
+        
+        const valueElement = statItem.querySelector('.stat-value');
+        const labelElement = statItem.querySelector('.stat-label');
+        
+        setTimeout(() => {
+            valueElement.style.opacity = '1';
+            valueElement.style.transform = 'translateY(0)';
+        }, 200);
+        
+        setTimeout(() => {
+            labelElement.style.opacity = '1';
+            labelElement.style.transform = 'translateY(0)';
+        }, 300);
+        
+        const finalValue = parseInt(statItem.dataset.value, 10);
+        animateCounter(valueElement, finalValue);
         }
-    });
-</script>
-    <script src="script.js"></script>
-</body>
 
+        function animateCounter(element, finalValue) {
+            const duration = 6000; // 6 secs
+            const startTime = performance.now();
+            let currentValue = 0;
+
+            function updateCounter(timestamp) {
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                currentValue = Math.floor(progress * finalValue);
+                element.textContent = currentValue.toLocaleString() + "+";
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = finalValue.toLocaleString() + "+";
+                }
+        }
+        requestAnimationFrame(updateCounter);
+    }
+
+    </script>
+
+    <script>
+        const projectImages = document.querySelectorAll('.project-image');
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+
+        projectImages.forEach(image => {
+            image.addEventListener('click', function() {
+                popupImage.src = this.src;
+                popup.style.display = 'block';
+            });
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        projectImages.forEach(image => {
+            image.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            // this prevents drag and drop
+            image.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+
+        // prevents right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+  <!-- NAVBAR // removed -->
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+</body>
 </html>
