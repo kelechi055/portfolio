@@ -4,7 +4,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-size: auto;
     background-repeat: no-repeat; 
-    background: linear-gradient(120deg, #0d0d0d, #0a0a0a, #0d0d0d);
+    background: linear-gradient(to bottom, #101010, #1D1D1F);
     height: 100%;
     padding: 0;
     width: 100%;
@@ -27,15 +27,12 @@ img {
 
 .featured-image {
     text-align: center;  
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;         
+    transform: translateY(20px);   
   }
   
   .featured-image img {
     max-width: 100%;           
     height: auto;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     margin-bottom: 50px;
     width: auto;
   }
@@ -43,15 +40,9 @@ img {
   .featured-image2 {
     display: flex;            
     justify-content: center;  
-    gap: 10px;     
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;          
+    gap: 10px;            
   }
 
-  .featured-image img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  }
   
   .featured-image2 img {
     width: 50%;               
@@ -59,11 +50,6 @@ img {
     border-radius: 20px;      
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .featured-image2 img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
   }
   
 #background {
@@ -109,29 +95,105 @@ img {
     transition: transform 0.3s ease;
 }
 
+.fire-text-purple {
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      #4B0082,
+      #A855F7,
+      #D946EF,
+      #A855F7,
+      #4B0082
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: flame-animation 3s linear infinite;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(168,85,247, 0.8);
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes flame-animation {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .purple-fire-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #A855F7;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 15px #A855F7, 0 0 30px #A855F7;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .purple-fire-link:hover {
+    background-color: #9333EA;
+    box-shadow: 0 0 20px #9333EA, 0 0 40px #9333EA, 0 0 60px #9333EA;
+    transform: scale(1.05);
+  }
+  
+
+.purple-text {
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        #9400D3, #4B0082, #9400D3,
+        #9400D3, #4B0082, #9400D3
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: rainbow-animation 10s linear infinite;
+    font-weight: bold;
+    font-style: italic;
+    transition: transform 0.3s ease;
+}
+
+.fire-text {
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      #FF4500, 
+      #FFA500, 
+      #FFD700,
+      #FFA500,
+      #FF4500
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: flame-animation 3s linear infinite;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes flame-animation {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+
+
 .underline-rainbow {
     position: relative;
 }
 
-.underline-rainbow::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(
-        to right, violet, indigo, blue, green, yellow, orange, red
-    );
-    background-size: 200% 100%;
-    animation: rainbow-animation 5s linear infinite;
-}
-
-
-
-.rainbow-text:hover {
-    scale: 1.05;
-}
 
 @keyframes rainbow-animation {
     0% {
@@ -155,20 +217,24 @@ img {
     font-size: 1.0em;
     margin-left: 78px;
     margin-top: 0px;
+    color: #9CA3AF;
+    
 }
 
 #typing-text {
     text-align: center;
+    font-weight: lighter;
     border-right: 2px solid white;
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
-    color: #A7A7A7;
+    color: #9CA3AF;
     position: absolute;
+    font-family: Inter;
 }
 
 .btn-get-in-touch:hover {
-  background-color: #047857 !important;
+  background-color: #6A379E ;
 }
 
 .btn-view-projects:hover {
@@ -179,7 +245,7 @@ img {
 h2 {
     font-size: 3.0em;
     text-align: center;
-    color: #A7A7A7;
+    color: #ffffff;
     animation: slide-down 2s ease-in-out;
 }
 
@@ -738,11 +804,9 @@ h4 {
 }
 
 .footer {
-    bottom: 0; /* Stick to the bottom */
-    left: 0;
     width: 100%; /* Full width */
     font-size: 12px;
-    color: #3a3a3a;
+    color: #666464;
     padding: 10px;
     text-align: center;
 }
@@ -760,7 +824,7 @@ h4 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 2rem;
-    color: #14E956 !important;
+    color: #763DAF !important;
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInDown 0.5s forwards;
@@ -1026,16 +1090,16 @@ h4 {
     margin-bottom: 10px; /* Margin at the bottom */
     font-family: 'Inter', sans-serif;
     font-weight: 550;
-    color: #14e956;
+    color: #D8B4FE;
 }
 
 .tech-stack span {
-    background-color: rgba(20, 233, 86, 0.1); /* Light green background */
+    background-color: #27272A; /* Light green background */
     border-radius: 8px; /* Rounded corners */
     padding: 8px 12px; /* Padding inside each item */
     font-size: 14px; /* Font size */
     white-space: nowrap; /* Prevent text wrapping */
-    border: 1px solid #14e956; /* Border with same color as text */
+    border: 1px solid #D8B4FE; /* Border with same color as text */
 }
 /* Heading for tech stack */
 .tech-stack h4 {
@@ -1179,13 +1243,14 @@ h4 {
 
 .project-content {
     padding: 10px 15px; /* Reduced padding for better spacing */
-    color: #fff;
+    color: #ffffff;
 }
 
 .project-title {
     font-size: 1.6rem;
     margin: 10px 0 5px; /* Reduced margin above the title */
     font-weight: bold;
+    color: #A7A7A7 !important;
 }
 
 .project-description {
@@ -1193,6 +1258,7 @@ h4 {
     line-height: 1.5;
     margin-bottom: 10px; /* Reduced margin bottom */
     color: #A7A7A7;
+    font-weight: 250;
 }
 
 
@@ -1204,7 +1270,7 @@ h4 {
 
 .project-link {
     color: #000000;
-    background-color: #14e956;
+    background-color: #D8B4FE;
     border-radius: 5px;
     padding: 8px 15px;
     text-decoration: none;
@@ -1213,12 +1279,12 @@ h4 {
 }
 
 .project-link:hover {
-    background-color: #13c24a;
+    background-color: #aa8ec9;
 }
 
 .placement-badge {
     display: inline-block;
-    background-color: #14e956;
+    background-color: #D8B4FE;
     color: #000000;
     padding: 5px 10px;
     border-radius: 20px;
@@ -1230,7 +1296,7 @@ h4 {
 }
 
 .placement-badge:hover {
-    background-color: #13c24a;
+    background-color: #aa8ec9;
 }
 
 #particles-js {
@@ -1295,11 +1361,6 @@ h4 {
     margin-top: 20px;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05); /* Slightly larger scale on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-}
-
 
 .gallery-item img {
     width: 100%;
@@ -1314,7 +1375,7 @@ h4 {
 
 
 body {
-    background: linear-gradient(to bottom, #18181b, #000);
+    background: linear-gradient(to bottom, #000000, #000000, #161616, #000000,#000000,#000000);
     color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -1337,7 +1398,7 @@ body {
 .about-title h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #14E956;
+    color: #A855F7;
 }
 
 .about-content {
@@ -1358,13 +1419,13 @@ body {
 }
 
 .about-link {
-    color: #14E956;
+    color: #A855F7;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .about-link:hover {
-    color: #01bb3f;
+    color: #7d41b6;
 }
 
 .about-image img {
@@ -1417,7 +1478,7 @@ body {
 }
 
 .tech-stack img:hover {
-    transform: scale(1.1) !important; /* Slightly enlarges the icon */
+    transform: scale(1.0) !important; /* Slightly enlarges the icon */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -1430,7 +1491,7 @@ body {
 .titles{
     font-size: 2.5em;
     margin-bottom: 70px;
-    color: #14E956;
+    color: #763DAF;
 }
 
 .music-box {
