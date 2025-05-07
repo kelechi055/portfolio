@@ -132,14 +132,13 @@ img {
     border: none;
     border-radius: 10px;
     text-decoration: none;
-    box-shadow: 0 0 15px #A855F7, 0 0 30px #A855F7;
+    box-shadow: 0 0 15px #A855F7, 0 0 30px #A855F7 1.5s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   
   .purple-fire-link:hover {
     background-color: #9333EA;
-    box-shadow: 0 0 20px #9333EA, 0 0 40px #9333EA, 0 0 60px #9333EA;
-    transform: scale(1.05);
+    box-shadow: 0 0 10px #9333EA, 0 0 20px #9333EA, 0 0 30px #9333EA;
   }
   
 
@@ -766,12 +765,7 @@ h4 {
 }
 
 .interactive-img {
-    transition: transform 0.3s;
     cursor: pointer;
-}
-
-.interactive-img:hover {
-    transform: scale(1.3);
 }
 
 .topright a {
