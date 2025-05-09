@@ -11,6 +11,17 @@ body {
     
 }
 
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+}
 
 * {
     font-family: inherit;
@@ -881,6 +892,28 @@ h4 {
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
   }
+  
+
+.icon {
+    width: auto;
+    height: 60px;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
   
   .icon-container {
     display: flex;
