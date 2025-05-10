@@ -983,6 +983,7 @@ h4 {
   text-decoration: none;
   overflow: hidden;
   transition: all 0.3s ease;
+  gap: 1rem;
 }
 
 .contact-button .mail-icon {
@@ -1010,6 +1011,33 @@ h4 {
   top: 50%;
 }
 
+.top-arrow-link {
+    display: inline-flex;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.top-arrow-link img {
+    transition: transform 0.3s ease;
+}
+
+.contact-button:hover .btn-text {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.contact-button:hover .mail-icon {
+    transform: translate(-50%, -50%) scale(1.4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.top-arrow-link:hover img {
+    transform: scale(1.2);
+}
   .animate-in {
     opacity: 1;
     transform: translateY(0);
