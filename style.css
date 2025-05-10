@@ -989,12 +989,12 @@ h4 {
 .contact-button .mail-icon {
   width: 24px;
   height: 24px;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease-in-out;
   z-index: 2;
 }
 
 .contact-button .btn-text {
-  margin-left: 0.75rem;
+  margin-left: 0rem;
   transition: opacity 0.3s ease, transform 0.1s ease;
   white-space: nowrap;
 }
@@ -1009,6 +1009,14 @@ h4 {
   position: absolute;
   left: 50%;
   top: 50%;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .top-arrow-link {
