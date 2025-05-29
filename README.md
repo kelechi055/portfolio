@@ -1,11 +1,11 @@
-# 💼 Portfolio Website
+# 💼 my portfolio website
 
-## Languages Used:
+## languages used:
 
-- **HTML5**: for creating the structure of the web pages.
-- **CSS3**: for designing the visual presentation of the website.
-- **JavaScript**: for adding interactivity and dynamic behavior to the website.
+- **html5**: for creating the structure of the web pages.  
+- **css3**: for designing the visual presentation of the website.  
+- **javascript**: for adding interactivity and dynamic behavior to the website.
 
-## Live Website
+## live website
 
-You can view the live website here: [https://kelechiopurum.vercel.app/](https://kelechiopurum.vercel.app/)
+you can view the live website here: [kelech1.vercel.app](https://kelech1.vercel.app)
