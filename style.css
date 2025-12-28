@@ -237,7 +237,6 @@ img {
     font-style: italic;
     text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
     transition: transform 0.3s ease;
-    cursor: url('/images/fire-cursor.png') 24 21, auto;
     
   }
   
