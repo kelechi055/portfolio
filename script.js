@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const texts = [
+    "a <Software Engineer/>.",
     "a CompSci Student.",
-    "a <Web Developer/>.",
-    "a {Software Engineer}.",
-    "a /Graphic Designer.",
-    "a [Content Creator]."
+    "a Problem Solver.",
+    "Creative Technologist.",
+    "a Builder."
 ];
 
 let count = 0;
